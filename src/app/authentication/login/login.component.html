@@ -1,0 +1,116 @@
+<div class="main-wrapper login-body">
+  <div class="container-fluid px-0">
+    <div class="row">
+      <div class="col-lg-6 login-wrap-bg">
+        <div class="login-wrapper">
+          <div class="loginbox">
+            <div class="login-right">
+              <div class="login-right-wrap">
+                <h2>Iniciar Sesión</h2>
+                <!-- Formulario -->
+                <form [formGroup]="form" (ngSubmit)="loginFormSubmit()">
+                  <div class="form-group">
+                    <label for="Email">Correo Electrónico <span class="login-danger">*</span></label>
+                    <input
+                      class="form-control"
+                      formControlName="email"
+                      type="text"
+                      [ngClass]="{
+                        'is-invalid': f['email'].touched && f['email'].invalid
+                      }"
+                    />
+                    <div
+                      *ngIf="f['email'].touched && f['email'].invalid"
+                      class="invalid-feedback"
+                    >
+                      <div
+                        *ngIf="f['email'].errors && f['email'].errors['required']"
+                      >
+                        El correo electrónico es obligatorio.
+                      </div>
+                      <div
+                        *ngIf="f['email'].errors && f['email'].errors['email']"
+                      >
+                        Por favor, introduce una dirección de correo válida.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="Password">Contraseña <span class="login-danger">*</span></label>
+                    <input
+                      class="form-control pass-input"
+                      [type]="passwordClass ? 'text' : 'password'"
+                      formControlName="password"
+                      [ngClass]="{
+                        'is-invalid': f['password'].touched && f['password'].invalid
+                      }"
+                    />
+                    <div
+                      *ngIf="f['password'].touched && f['password'].invalid"
+                      class="invalid-feedback"
+                    >
+                      <div
+                        *ngIf="
+                          f['password'].errors &&
+                          f['password'].errors['required']
+                        "
+                      >
+                        La contraseña es obligatoria.
+                      </div>
+                    </div>
+                    <span (click)="togglePassword()" (keyup.enter)="togglePassword()" [ngClass]="passwordClass ? 'feather icon-eye' : 'feather icon-eye-off'"
+                      class="profile-views toggle-password" tabindex="0"
+                    ></span>
+                  </div>
+                  <div class="forgotpass">
+                    <div class="remember-me">
+                      <label
+                        class="custom_check mr-2 mb-0 d-inline-flex remember-me"
+                      >
+                        Recuérdame
+                        <input type="checkbox" name="radio" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                    <a [routerLink]="routes.forgotPassword">¿Olvidaste tu contraseña?</a>
+                  </div>
+                  <div class="form-group login-btn">
+                    <button
+                      [disabled]="form.invalid"
+                      class="btn btn-primary btn-block"
+                      type="submit"
+                    >
+                      Iniciar Sesión
+                    </button>
+                  </div>
+                </form>
+                <!-- /Formulario -->
+
+                <div class="next-sign">
+                  <p class="account-subtitle">
+                    ¿Necesitas una cuenta?
+                    <a [routerLink]="routes.register">Regístrate</a>
+                  </p>
+
+                  <!-- Inicio de Sesión con Redes Sociales -->
+                  <div class="social-login">
+                    <a href="javascript:;">
+                      <img src="assets/img/icons/login-icon-01.svg" alt="" />
+                    </a>
+                    <a href="javascript:;">
+                      <img src="assets/img/icons/login-icon-02.svg" alt="" />
+                    </a>
+                    <a href="javascript:;">
+                      <img src="assets/img/icons/login-icon-03.svg" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
