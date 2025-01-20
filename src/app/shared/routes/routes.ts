@@ -140,29 +140,29 @@ export class routes {
   public static get editDepartment(): string {
     return this.baseUrl + '/departments/edit-department';
   }
-  public static get addDoctor(): string {
-    return this.baseUrl + '/doctor/add-doctor';
+  public static get addDocente(): string {
+    return this.baseUrl + '/docente/add-docente';
   }
   public static get doctorProfile(): string {
-    return this.baseUrl + '/doctor/doctor-profile';
+    return this.baseUrl + '/docente/docente-profile';
   }
   public static get doctorSetting(): string {
-    return this.baseUrl + '/doctor/doctor-setting';
+    return this.baseUrl + '/docente/docente-setting';
   }
-  public static get doctorsList(): string {
-    return this.baseUrl + '/doctor/doctors-list';
+  public static get docentesList(): string {
+    return this.baseUrl + '/docente/docente-list';
   }
   public static get editDoctor(): string {
-    return this.baseUrl + '/doctor/edit-doctor';
+    return this.baseUrl + '/docente/edit-docente';
   }
   public static get addSchedule(): string {
-    return this.baseUrl + '/doctor-schedule/add-schedule';
+    return this.baseUrl + '/docente-schedule/add-schedule';
   }
   public static get editSchedule(): string {
-    return this.baseUrl + '/doctor-schedule/edit-schedule';
+    return this.baseUrl + '/docente-schedule/edit-schedule';
   }
   public static get schedule(): string {
-    return this.baseUrl + '/doctor-schedule/schedule';
+    return this.baseUrl + '/docente-schedule/schedule';
   }
   public static get email(): string {
     return this.baseUrl + '/email';
@@ -240,19 +240,19 @@ export class routes {
     return this.baseUrl + '/invoice/view-invoice';
   }
   public static get addPatient(): string {
-    return this.baseUrl + '/patient/add-patient';
+    return this.baseUrl + '/estudiante/add-patient';
   }
   public static get editPatient(): string {
-    return this.baseUrl + '/patient/edit-patient';
+    return this.baseUrl + '/estudiante/edit-patient';
   }
   public static get patientProfile(): string {
-    return this.baseUrl + '/patient/patient-profile';
+    return this.baseUrl + '/estudiante/patient-profile';
   }
   public static get patientSetting(): string {
-    return this.baseUrl + '/patient/patient-setting';
+    return this.baseUrl + '/estudiante/patient-setting';
   }
   public static get patientsList(): string {
-    return this.baseUrl + '/patient/patients-list';
+    return this.baseUrl + '/estudiante/patients-list';
   }
   public static get addSalary(): string {
     return this.baseUrl + '/payroll/add-salary';
@@ -355,5 +355,13 @@ export class routes {
   }
   public static get error500(): string {
     return this.baseUrl + '/error/error500';
+  }
+
+
+  public static get registerRole(): string {
+    return this.baseUrl + '/roles/register';
+  }
+  public static get listadoRole(): string {
+    return this.baseUrl + '/roles/list';
   }
 }

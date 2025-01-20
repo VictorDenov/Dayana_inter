@@ -1,0 +1,70 @@
+
+
+
+<div class="page-wrapper">
+    <div class="content">
+        <div class="page-header">
+            <div class="row">
+                <div class="col-sm-12">
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a [routerLink]="routes.docentesList">Docente </a></li>
+                        <li class="breadcrumb-item"><i class="feather icon-chevron-right"></i></li>
+                        <li class="breadcrumb-item active">Agregar Docente</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /Page Header -->
+        <div class="row">
+            <div class="col-sm-12">
+
+                <div class="card">
+                    <div class="card-body">
+                        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-heading">
+                                        <h4>Detalles Docentes</h4>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="form-group local-forms">
+                                        <label for="nombre">Nombre <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="text" placeholder="" name="nombre" id="nombre"  [(ngModel)]="nombre">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="form-group local-forms">
+                                        <label for="nombreDocente">Nombre Usuario <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="text" placeholder=""  id="nombreDocente" name="nombreDocente"  [(ngModel)]="nombreDocente">
+                                    </div>
+                                </div>
+                               
+                              
+                                <div class="col-12 col-md-6 col-xl-6">
+                                    <div class="form-group local-forms">
+                                        <label for="email">Email <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="email" placeholder="" id="email" name="email"  [(ngModel)]="email">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-6">
+                                    <div class="form-group local-forms">
+                                        <label for="Password">Password <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="password" placeholder="" id="Password" name="Password"  [(ngModel)]="password">
+                                    </div>
+                                </div>
+                            
+                                <div class="col-12">
+                                    <div class="doctor-submit text-end">
+                                        <button type="submit" class="btn btn-primary submit-form me-2" [disabled]="!f.valid">Enviar</button>
+                                        <button type="submit" class="btn btn-primary cancel-form">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -13,23 +13,8 @@
         </div>
         <!-- /Encabezado de página -->
         
-        <div class="good-morning-blk">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="morning-user">
-                        <h2>Buenos Días, <span>Angie Gusqui</span></h2>
-                        <p>Que tengas un buen día en el trabajo</p>
-                    </div>
-                </div>
-                <div class="col-md-6 position-blk">
-                    <div class="morning-img">
-                        <img src="" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-        
         <div class="row">
+            <!-- Estudiantes -->
             <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
                 <div class="dash-widget">
                     <div class="dash-boxs comman-flex-center">
@@ -41,6 +26,8 @@
                     </div>
                 </div>
             </div>
+        
+            <!-- Docentes -->
             <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
                 <div class="dash-widget">
                     <div class="dash-boxs comman-flex-center">
@@ -52,29 +39,86 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
-                <div class="dash-widget">
-                    <div class="dash-boxs comman-flex-center">
-                        <img src="assets/img/icons/scissor.svg" alt="">
-                    </div>
-                    <div class="dash-content dash-count">
-                        <h4>Materias</h4>
-                    </div>
-                </div>
-            </div>
+        
+            <!-- Saldo o dinero (si es un ejemplo de saldo de alguna cuenta, por ejemplo, estudiantes con saldo) -->
             <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
                 <div class="dash-widget">
                     <div class="dash-boxs comman-flex-center">
                         <img src="assets/img/icons/empty-wallet.svg" alt="">
                     </div>
                     <div class="dash-content dash-count">
-                        <h4>Docentes</h4>
+                        <h4>Saldo Estudiantes</h4>
                         <h2><span class="counter-up" [countUp]="20250" [options]="{duration: 10}">20,250</span></h2>
                     </div>
                 </div>
             </div>
+        
+            <!-- Cursos Ofrecidos -->
+            <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+                <div class="dash-widget">
+                    <div class="dash-boxs comman-flex-center">
+                        <img src="assets/img/icons/book-open.svg" alt="">
+                    </div>
+                    <div class="dash-content dash-count">
+                        <h4>Cursos Ofrecidos</h4>
+                        <h2><span class="counter-up" [countUp]="50" [options]="{duration: 10}">50</span></h2>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Administradores -->
+            <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+                <div class="dash-widget">
+                    <div class="dash-boxs comman-flex-center">
+                        <img src="assets/img/icons/admin.svg" alt="Administrador">
+                    </div>
+                    <div class="dash-content dash-count">
+                        <h4>Administradores</h4>
+                        <h2><span class="counter-up" [countUp]="10" [options]="{duration: 10}">10</span></h2>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Solicitudes Pendientes -->
+            <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+                <div class="dash-widget">
+                    <div class="dash-boxs comman-flex-center">
+                        <img src="assets/img/icons/request.svg" alt="Solicitudes Pendientes">
+                    </div>
+                    <div class="dash-content dash-count">
+                        <h4>Solicitudes Pendientes</h4>
+                        <h2><span class="counter-up" [countUp]="25" [options]="{duration: 10}">25</span></h2>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Actividades Pendientes -->
+            <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+                <div class="dash-widget">
+                    <div class="dash-boxs comman-flex-center">
+                        <img src="assets/img/icons/tasks.svg" alt="Actividades Pendientes">
+                    </div>
+                    <div class="dash-content dash-count">
+                        <h4>Actividades Pendientes</h4>
+                        <h2><span class="counter-up" [countUp]="5" [options]="{duration: 10}">5</span></h2>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Rendimiento de Estudiantes -->
+            <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+                <div class="dash-widget">
+                    <div class="dash-boxs comman-flex-center">
+                        <img src="assets/img/icons/chart.svg" alt="Rendimiento Estudiantes">
+                    </div>
+                    <div class="dash-content dash-count">
+                        <h4>Rendimiento Estudiantes</h4>
+                        <h2><span class="counter-up" [countUp]="85" [options]="{duration: 10}">85%</span></h2>
+                    </div>
+                </div>
+            </div>
         </div>
-
+        
         <div class="row">
             <div class="col-12 col-md-12 col-lg-6 col-xl-9">
                 <div class="card">
@@ -164,6 +208,9 @@
                             <div class="departments-list">
                                 <h4>Construccion</h4>
                                 <p>10%</p>
+
+
+                                
                             </div>
                         </div>
                         <div class="activity-top">

@@ -233,13 +233,13 @@ export class DataService {
           subMenus: [
             {
               menuValue: 'Listar Docente',
-              route: routes.doctorsList,
-              base: routes.doctorsList,
+              route: routes.docentesList,
+              base: routes.docentesList,
             },
             {
               menuValue: 'Agregar Docente',
-              route: routes.addDoctor,
-              base: routes.addDoctor,
+              route: routes.addDocente,
+              base: routes.addDocente,
             },
             {
               menuValue: 'Editar Docente',
@@ -261,28 +261,68 @@ export class DataService {
           img: 'assets/img/icons/menu-icon-03.svg',
           subMenus: [
             {
-              menuValue: 'Listar Docente',
+              menuValue: 'Listar Estudiante',
               route: routes.patientsList,
               base: routes.patientsList,
             },
             {
-              menuValue: 'Agregar Docente',
+              menuValue: 'Agregar Estudiante',
               route: routes.addPatient,
               base: routes.addPatient,
             },
             {
-              menuValue: 'Editar Docente',
+              menuValue: 'Editar Estudiante',
               route: routes.editPatient,
               base: routes.editPatient,
             },
             {
-              menuValue: 'Editar Docente',
+              menuValue: 'Perfil Estudiante',
               route: routes.patientProfile,
               base: routes.patientProfile,
             },
           ],
         },
+
         {
+          menuValue: 'Roles y Permisos',
+          hasSubRoute: true,
+          showSubRoute: false,
+          base: 'gallery',
+          base2: 'profile',
+          icon: 'fa-columns',
+          faIcon: true,
+          subMenus: [
+            {
+              menuValue: 'Registrar Rol',
+              route: routes.registerRole,
+              base: routes.registerRole,
+              permision: 'register_rol',
+              show_nav: true,
+            },
+            {
+              menuValue: 'Listado',
+              route: routes.listadoRole,
+              base: routes.listadoRole,
+              permision: 'list_rol',
+              show_nav: true,
+            },
+            {
+              menuValue: 'Edit Rol',
+              route: '',
+              base: '',
+              permision: 'edit_rol',
+              show_nav: false,
+            },
+            {
+              menuValue: 'Delete Rol',
+              route: '',
+              base: '',
+              permision: 'delete_rol',
+              show_nav: false,
+            },
+          ],
+        },
+        /*{
           menuValue: 'Staff',
           hasSubRoute: true,
           showSubRoute: false,
@@ -320,8 +360,9 @@ export class DataService {
               base: routes.staffAttendance,
             },
           ],
-        },
-        {
+        },*/
+
+        /*{
           menuValue: 'Appointments',
           hasSubRoute: true,
           showSubRoute: false,
@@ -344,8 +385,9 @@ export class DataService {
               base: routes.editAppointment,
             },
           ],
-        },
-        {
+        },*/
+
+        /*{
           menuValue: 'Doctor Schedule',
           hasSubRoute: true,
           showSubRoute: false,
@@ -368,8 +410,9 @@ export class DataService {
               base: routes.editSchedule,
             },
           ],
-        },
-        {
+        },*/
+
+        /*{
           menuValue: 'Departments',
           hasSubRoute: true,
           showSubRoute: false,
@@ -392,8 +435,8 @@ export class DataService {
               base: routes.editDepartment,
             },
           ],
-        },
-        {
+        },*/
+        /*{
           menuValue: 'Accounts',
           hasSubRoute: true,
           showSubRoute: false,
@@ -426,8 +469,8 @@ export class DataService {
               base: routes.providentFund,
             },
           ],
-        },
-        {
+        },*/
+        /*{
           menuValue: 'Payroll',
           hasSubRoute: true,
           showSubRoute: false,
@@ -445,8 +488,8 @@ export class DataService {
               base: routes.salaryView,
             },
           ],
-        },
-        {
+        },*/
+        /*{
           menuValue: 'Chat',
           route: routes.chat,
           hasSubRoute: false,
@@ -478,8 +521,8 @@ export class DataService {
               base: routes.incomingCall,
             },
           ],
-        },
-        {
+        },*/
+       /* {
           menuValue: 'Email',
           hasSubRoute: true,
           showSubRoute: false,
@@ -502,8 +545,8 @@ export class DataService {
               base: routes.mailView,
             },
           ],
-        },
-        {
+        },*/
+        /*{
           menuValue: 'Blog',
           hasSubRoute: true,
           showSubRoute: false,
@@ -531,8 +574,8 @@ export class DataService {
               base: routes.editBlog,
             },
           ],
-        },
-        {
+        },*/
+        /*{
           menuValue: 'Assets',
           route: routes.assetsList,
           hasSubRoute: false,
@@ -569,8 +612,8 @@ export class DataService {
               base: routes.invoiceReports,
             },
           ],
-        },
-        {
+        },*/
+        /*{
           menuValue: 'Invoice',
           hasSubRoute: true,
           showSubRoute: false,
@@ -619,8 +662,8 @@ export class DataService {
           subMenus: [],
         },
       ],
-    },
-    {
+    },*/
+    /*{
       tittle: 'UI Elements',
       showAsTab: false,
       separateRoute: false,
@@ -648,8 +691,8 @@ export class DataService {
               base: routes.tabs,
             },
           ],
-        },
-        {
+        },*/
+        /*{
           menuValue: 'Forms',
           hasSubRoute: true,
           showSubRoute: false,
@@ -678,8 +721,8 @@ export class DataService {
               base: routes.formVertical,
             },
           ],
-        },
-        {
+        },*/
+        /*{
           menuValue: 'Tables',
           hasSubRoute: true,
           showSubRoute: false,
@@ -698,8 +741,8 @@ export class DataService {
               base: routes.tablesDataTables,
             },
           ],
-        },
-        {
+        },*/
+        /*{
           menuValue: 'Calendar',
           route: routes.calendar,
           hasSubRoute: false,
@@ -710,8 +753,8 @@ export class DataService {
           subMenus: [],
         },
       ],
-    },
-    {
+    },*/
+    /*{
       tittle: 'Extras',
       showAsTab: false,
       separateRoute: false,
@@ -771,7 +814,7 @@ export class DataService {
               base: routes.error500,
             },
           ],
-        },
+        },*/
         
       ],
     },
