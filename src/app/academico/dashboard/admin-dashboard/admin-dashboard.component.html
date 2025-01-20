@@ -119,62 +119,6 @@
             </div>
         </div>
         
-        <div class="row">
-            <div class="col-12 col-md-12 col-lg-6 col-xl-9">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="chart-title patient-visit">
-                            <h4>Visitas de Estudiantes</h4>
-                            <div >
-                                <ul class="nav chat-user-total">
-                                    <li><i class="fa fa-circle current-users" aria-hidden="true"></i>Masculino 75%</li>
-                                    <li><i class="fa fa-circle old-users" aria-hidden="true"></i> Femenino 25%</li>
-                                </ul>
-                            </div>
-                            <div class="form-group mb-0">
-                                <mat-select [(ngModel)]="selectedValue" class="form-control select"  placeholder="2022">
-                                        <mat-option *ngFor="let data of selecedList" [value]="data.value">
-                                          {{data.value}}
-                                        </mat-option>
-                                </mat-select>
-                            </div>
-                        </div>	
-                        <div id="patient-chart">  
-                            <apx-chart
-                            [series]="chartOptionsOne.series"
-                            [chart]="chartOptionsOne.chart"
-                            [dataLabels]="chartOptionsOne.dataLabels"
-                            [plotOptions]="chartOptionsOne.plotOptions"
-                            [responsive]="chartOptionsOne.responsive"
-                            [xaxis]="chartOptionsOne.xaxis"
-                            [legend]="chartOptionsOne.legend"
-                            [fill]="chartOptionsOne.fill"
-                            [grid]="chartOptionsOne.grid"
-                            [xaxis]="chartOptionsOne.xaxis"
-                          ></apx-chart></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-12 col-lg-6 col-xl-3 d-flex">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="chart-title">
-                            <h4>Semestres</h4>
-                        </div>	
-                        <div id="donut-chart-dash" class="chart-user-icon">
-                            <apx-chart class="donut-chart-custom"
-                            [series]="chartOptionsTwo.series"
-                            [chart]="chartOptionsTwo.chart"
-                            [labels]="chartOptionsTwo.labels"
-                            [responsive]="chartOptionsTwo.responsive"
-                            [dataLabels]="chartOptionsTwo.dataLabels"
-                            [legend]="chartOptionsTwo.legend"></apx-chart>
-                            <img src="assets/img/icons/user-icon.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div class="row">
             <div class="col-12 col-md-12  col-xl-4">
