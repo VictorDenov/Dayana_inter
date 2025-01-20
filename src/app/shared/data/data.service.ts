@@ -283,7 +283,7 @@ export class DataService {
           ],
         },
 
-        {
+        /*{
           menuValue: 'Roles y Permisos',
           hasSubRoute: true,
           showSubRoute: false,
@@ -321,7 +321,7 @@ export class DataService {
               show_nav: false,
             },
           ],
-        },
+        },*/
         /*{
           menuValue: 'Staff',
           hasSubRoute: true,
