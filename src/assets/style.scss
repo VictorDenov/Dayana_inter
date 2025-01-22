@@ -91,9 +91,6 @@ $color_90: #8f9bba;
 $color_91: rgb(51 53 72 / 50%);
 $color_92: #131523;
 $color_93: #ff0000;
-$color_94:#F3F8FB;
-
-
 $font-family_1: "Poppins", sans-serif;
 $font-family_2: "FontAwesome";
 $font-family_3: "Rubik", sans-serif;
@@ -173,7 +170,11 @@ $border-bottom-color_3: #2e37a4;
 $border-left-color_1: transparent;
 $border-left-color_2: #009efb;
 
-
+/*
+Author       : Dreamguys
+Template Name: PreClinic - Medical and Hospital Admin Template
+Version      : 1.0
+*/
 /*============================
  [Table of CSS]
 
@@ -1419,7 +1420,7 @@ table.table {
   top: 0;
   z-index: 1039;
   height: 70px;
-  background:#2B4E84;
+  background: #ffffff;
   box-shadow: 0px 0px 14px rgba(204, 204, 204, 0.25);
   .header-left {
     float: left;
@@ -1462,7 +1463,7 @@ table.table {
   height: 70px;
   justify-content: flex-start;
   span {
-    color: $color_94;
+    color: $color_3;
     font-size: 20px;
     font-weight: 500;
     margin-left: 10px;
@@ -1474,7 +1475,7 @@ table.table {
   margin-bottom: 0;
   padding: 14px 20px;
   h3 {
-    color: $color_94;
+    color: $color_16;
     font-size: 18px;
     font-weight: 500;
     margin: 0;
@@ -1525,7 +1526,7 @@ table.table {
         background-color: $background-color_13;
       }
       .badge {
-        color: $color_94;
+        color: $color_16;
         font-size: 60%;
         font-weight: 700;
         position: absolute;
@@ -1588,17 +1589,17 @@ table.table {
     width: 270px;
   }
   .form-control {
-    background: rgba(242, 246, 249, 1.00);
+    background: rgba(46, 55, 164, 0.05);
     border-radius: 12px;
     border: 0;
     height: 40px;
     padding: 10px 59px 10px 40px;
     &::-webkit-input-placeholder {
-      color: $color_94;
+      color: $color_18;
       font-weight: 500;
     }
     &::-moz-placeholder {
-      color: $color_94;
+      color: $color_18;
       font-weight: 500;
     }
     &:-ms-input-placeholder {
@@ -1666,7 +1667,7 @@ table.table {
   top: 90px;
   width: 250px;
   z-index: 1039;
-  background-color: $background-color_17;
+  background-color: $background-color_1;
   bottom: 0;
   margin-top: 0px;
   position: fixed;
@@ -2000,7 +2001,7 @@ table.table {
       min-height: 24px;
       line-height: 18px;
       transition: all 0.2s ease-in-out 0s;
-      background: rgba(190, 192, 201, 0.05);
+      background: rgba(46, 55, 164, 0.05);
       border-radius: 8px;
       width: 40px;
       height: 40px;
@@ -2062,12 +2063,12 @@ table.table {
           position: relative;
           label {
             font-size: 12px;
-            color: $color_94;
+            color: $color_1;
             font-weight: 500;
             position: absolute;
             top: -10px;
             left: 10px;
-            background:#2B4E84;
+            background: #fff;
             margin-bottom: 0;
             padding: 0px 5px;
           }
@@ -2089,16 +2090,16 @@ table.table {
           font-weight: 500;
           margin-left: auto;
           &:hover {
-            color: $color_94;
+            color: $color_13;
             text-decoration: underline;
           }
         }
       }
       .dont-have {
-        color: $color_94;
+        color: $color_25;
         margin: 20px 0px;
         a {
-          color: $color_94;
+          color: $color_26;
           font-weight: 500;
           &:hover {
             text-decoration: underline;
@@ -2108,7 +2109,7 @@ table.table {
       padding: 50px;
       width: 100%;
     }
-    background: #2B4E84;
+    background: #ffffff;
     box-shadow: 0px 80px 80px rgba(46, 55, 164, 0.03);
     border-radius: 24px;
     display: flex;
@@ -2134,7 +2135,7 @@ table.table {
   -webkit-flex-wrap: wrap;
 }
 .login-danger {
-  color: $color_94;
+  color: $color_22;
 }
 .star-red {
   color: $color_22;
@@ -2686,17 +2687,45 @@ ul.chat-user-total {
 .take-btn {
   min-width: 80px;
 }
-
-
-
+.good-morning-blk {
+  background: #ffffff;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 9;
+  &:before {
+    content: "";
+    position: absolute;
+    background-image: url(./img/bg-img-01.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+}
+.morning-user {
+  padding: 50px 0px 50px 35px;
+  h2 {
+    font-size: 28px;
+    font-weight: 600;
+    span {
+      color: $color_3;
+    }
+  }
+  p {
+    font-size: 15px;
+    font-weight: 500;
+    color: $color_23;
+    margin-bottom: 0;
+  }
+}
 .morning-img {
   img {
     position: absolute;
     bottom: 0;
   }
 }
-
-
 .position-blk {
   position: relative;
 }
@@ -12740,4 +12769,6 @@ form {
     }
   }
 }
+
+
 

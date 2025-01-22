@@ -59,179 +59,84 @@ export type ChartOptions = {
   templateUrl: './docente-dashboard.component.html',
   styleUrls: ['./docente-dashboard.component.scss'],
 })
+
+
 export class DashboardDocenteComponent {
   public routes = routes;
-  @ViewChild('chart') chart!: ChartComponent;
-  public chartOptionsOne: Partial<ChartOptions>;
-  public chartOptionsTwo: Partial<ChartOptions>;
-  public chartOptionsThree: Partial<ChartOptions>;
-  public selectedValue ! : string  ;
 
-  constructor() {
-    this.chartOptionsOne = {
-      chart: {
-        height: 200,
-        type: 'line',
-        toolbar: {
-          show: false,
-        },
-      },
-      grid: {
-        show: true, 
-        xaxis: {
-          lines: {
-            show: false
-           }
-         },  
-        yaxis: {
-          lines: { 
-            show: true 
-           }
-         },   
-        },
-      dataLabels: {
-        enabled: false,
-      },
-      stroke: {
-        curve: 'smooth',
-      },
-      series: [
+  // Lista de carreras con semestres, paralelos y estudiantes
+  carreras = [
+    { name: 'Desarrollo de Software', 
+      semestres: [
         {
-          name: 'Income',
-          color: '#2E37A4',
-          data: [45, 60, 75, 51, 42, 42, 30],
+          name: 'Primer Semestre', 
+          paralelos: [
+            { name: 'A', students: ['Estudiante 1', 'Estudiante 2', 'Estudiante 3'] },
+            { name: 'B', students: ['Estudiante 4', 'Estudiante 5', 'Estudiante 6'] }
+          ]
         },
-      ],
-      xaxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
-      },
-    };
-    this.chartOptionsTwo = {
-      chart: {
-        height: 250,
-        width: 330,
-        type: 'donut',
-        toolbar: {
-          show: false,
+        {
+          name: 'Segundo Semestre', 
+          paralelos: [
+            { name: 'A', students: ['Estudiante 7', 'Estudiante 8', 'Estudiante 9'] },
+            { name: 'B', students: ['Estudiante 10', 'Estudiante 11', 'Estudiante 12'] }
+          ]
         },
-      },
-      plotOptions: {
-        bar: {
-          horizontal: false,
-          columnWidth: '50%',
-        },
-      },
-      dataLabels: {
-        enabled: false,
-      },
+      ]
+    },
+  ];
 
-      series: [44, 55],
-      labels: ['Male', 'Female'],
-      responsive: [
-        {
-          breakpoint: 480,
-          options: {
-            chart: {
-              width: 200,
-            },
-            legend: {
-              position: 'bottom',
-            },
-          },
-        },
-      ],
-      legend: {
-        position: 'bottom',
-      },
-    };
-    this.chartOptionsThree = {
-      chart: {
-        height: 230,
-        type: 'bar',
-        stacked: false,
-        toolbar: {
-          show: false,
-        },
-      },
-      grid: {
-        show: true, 
-        xaxis: {
-          lines: {
-            show: false
-           }
-         },  
-        yaxis: {
-          lines: { 
-            show: true 
-           }
-         },   
-        },
-      responsive: [
-        {
-          breakpoint: 480,
-          options: {
-            legend: {
-              position: 'bottom',
-              offsetX: -10,
-              offsetY: 0,
-            },
-          },
-        },
-      ],
-      plotOptions: {
-        bar: {
-          horizontal: false,
-          columnWidth: '55%',
-        },
-      },
-      dataLabels: {
-        enabled: false,
-      },
-      stroke: {
-        show: true,
-        width: 6,
-        colors: ['transparent'],
-      },
-      series: [
-        {
-          name: 'Low',
-          color: '#D5D7ED',
-          data: [20, 30, 41, 67, 22, 43, 40, 10, 30, 20, 40],
-        },
-        {
-          name: 'High',
-          color: '#2E37A4',
-          data: [13, 23, 20, 8, 13, 27, 30, 25, 10, 15, 20],
-        },
-      ],
-      xaxis: {
-        categories: [
-          'Jan',
-          'Feb',
-          'Mar',
-          'Apr',
-          'May',
-          'Jun',
-          'Jul',
-          'Aug',
-          'Sep',
-          'Oct',
-          'Nov',
-          'Dec',
-        ],
-      },
-    };
+  // Variables para gestionar la selección del formulario
+  selectedCarrera!: string;
+  selectedSemestre!: string;
+  selectedParalelo!: string;
+  selectedEstudiante!: string;
+  selectedAtencion!: string;
+  detalleAtencion: string = '';  // Aquí se guarda el detalle de la atención
+
+  // Datos dinámicos basados en las selecciones
+  semestres: any[] = [];
+  paralelos: any[] = [];
+  estudiantes: string[] = [];
+  atenciones: string[] = ['Revisión de Tesis', 'Asesoría', 'Consulta General'];
+
+  // Método para actualizar semestres cuando se elige una carrera
+  onCarreraChange() {
+    const carrera = this.carreras.find(c => c.name === this.selectedCarrera);
+    this.semestres = carrera ? carrera.semestres : [];
+    this.selectedSemestre = this.semestres.length > 0 ? this.semestres[0].name : '';
+    this.paralelos = [];
+    this.estudiantes = [];
   }
-  selecedList: data[] = [
-    {value: '2022'},
-    {value: '2021'},
-    {value: '2020'},
-    {value: '2019'},
-  ];
-  selecedLists: data[] = [
-    {value: 'This Week'},
-    {value: 'Last Week'},
-    {value: 'This Month'},
-    {value: 'Last Month'},
-  ];
+
+  // Método para actualizar paralelos cuando se elige un semestre
+  onSemestreChange() {
+    const semestre = this.semestres.find(s => s.name === this.selectedSemestre);
+    this.paralelos = semestre ? semestre.paralelos : [];
+    this.selectedParalelo = this.paralelos.length > 0 ? this.paralelos[0].name : '';
+    this.estudiantes = [];
+  }
+
+  // Método para actualizar estudiantes cuando se elige un paralelo
+  onParaleloChange() {
+    const paralelo = this.paralelos.find(p => p.name === this.selectedParalelo);
+    this.estudiantes = paralelo ? paralelo.students : [];
+    this.selectedEstudiante = this.estudiantes.length > 0 ? this.estudiantes[0] : '';
+  }
+
+  // Método para registrar la atención
+  registrarAtencion() {
+    const atencionData = {
+      carrera: this.selectedCarrera,
+      semestre: this.selectedSemestre,
+      paralelo: this.selectedParalelo,
+      estudiante: this.selectedEstudiante,
+      tipoAtencion: this.selectedAtencion,
+      detalleAtencion: this.detalleAtencion, // Incluye el detalle si corresponde
+    };
+    console.log('Registro de atención:', atencionData);
+    // Aquí puedes agregar el código para registrar la atención en una base de datos o en el sistema
+  }
+
+  constructor() { }
 }

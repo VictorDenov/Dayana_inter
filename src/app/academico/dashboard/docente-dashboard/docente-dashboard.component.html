@@ -15,247 +15,185 @@
         </div>
         <!-- /Page Header -->
         
-       <!-- <div class="good-morning-blk">
+        <div class="good-morning-blk">
             <div class="row">
+                <!-- Columna izquierda: Mensaje de bienvenida -->
                 <div class="col-md-6">
                     <div class="morning-user">
-                        <h2>Good Morning, <span>Dr.Smith Wayne</span></h2>
-                        <p>Have a nice day at work</p>
+                        <h2>Bienvenido <span>Dr. [Nombre del Docente]</span></h2>
+                        <p>Esperamos que tengas un día productivo atendiendo a nuestros estudiantes.</p>
                     </div>
                 </div>
+                
+                <!-- Columna derecha: Imagen de atención a estudiantes -->
                 <div class="col-md-6 position-blk">
                     <div class="morning-img">
-                        <img src="assets/img/morning-img-02.png" alt="">
+                        <!-- Imagen relacionada con el sistema de atención a estudiantes -->
+                        <img src="assets/icon2/tutor-icon.svg" alt="Atención a estudiantes">
                     </div>
                 </div>
             </div>
         </div>
         
-        <div class="doctor-list-blk">
+        <div class="student-attendance-blk">
             <div class="row">
+                <!-- Atenciones realizadas -->
                 <div class="col-xl-3 col-md-6">
-                    <div class="doctor-widget border-right-bg">
-                        <div class="doctor-box-icon flex-shrink-0">
-                            <img src="assets/img/icons/doctor-dash-01.svg" alt="">
+                    <div class="attendance-widget border-right-bg">
+                        <div class="attendance-box-icon flex-shrink-0">
+                            <img src="assets/img/icons/student-attendance-01.svg" alt="Atenciones Realizadas">
                         </div>
-                        <div class="doctor-content dash-count flex-grow-1">
-                            <h4><span class="counter-up" [countUp]="30" [options]="{duration: 10}">30</span><span>/85</span><span class="status-green">+60%</span></h4>
-                            <h5>Appointments</h5>
+                        <div class="attendance-content dash-count flex-grow-1">
+                            <h4><span class="counter-up" [countUp]="30" [options]="{duration: 10}">30</span><span>/100</span><span class="status-green">+60%</span></h4>
+                            <h5>Atenciones Realizadas</h5>
                         </div>
                     </div>
                 </div>
+        
+                <!-- Consultas atendidas -->
                 <div class="col-xl-3 col-md-6">
-                    <div class="doctor-widget border-right-bg">
-                        <div class="doctor-box-icon flex-shrink-0">
-                            <img src="assets/img/icons/doctor-dash-02.svg" alt="">
+                    <div class="attendance-widget border-right-bg">
+                        <div class="attendance-box-icon flex-shrink-0">
+                            <img src="assets/img/icons/student-attendance-02.svg" alt="Consultas Atendidas">
                         </div>
-                        <div class="doctor-content dash-count flex-grow-1">
-                            <h4><span class="counter-up" [countUp]="20" [options]="{duration: 10}">20</span><span>/125</span><span class="status-pink">-20%</span></h4>
-                            <h5>Consultations</h5>
+                        <div class="attendance-content dash-count flex-grow-1">
+                            <h4><span class="counter-up" [countUp]="20" [options]="{duration: 10}">20</span><span>/80</span><span class="status-pink">-25%</span></h4>
+                            <h5>Consultas Atendidas</h5>
                         </div>
                     </div>
                 </div>
+        
+                <!-- Tareas Completadas -->
                 <div class="col-xl-3 col-md-6">
-                    <div class="doctor-widget border-right-bg">
-                        <div class="doctor-box-icon flex-shrink-0">
-                            <img src="assets/img/icons/doctor-dash-03.svg" alt="">
+                    <div class="attendance-widget border-right-bg">
+                        <div class="attendance-box-icon flex-shrink-0">
+                            <img src="assets/img/icons/student-attendance-03.svg" alt="Tareas Completadas">
                         </div>
-                        <div class="doctor-content dash-count flex-grow-1">
-                            <h4><span class="counter-up" [countUp]="12" [options]="{duration: 10}">12</span><span>/30</span><span class="status-green">+40%</span></h4>
-                            <h5>Operations</h5>
+                        <div class="attendance-content dash-count flex-grow-1">
+                            <h4><span class="counter-up" [countUp]="12" [options]="{duration: 10}">12</span><span>/40</span><span class="status-green">+30%</span></h4>
+                            <h5>Tareas Completadas</h5>
                         </div>
                     </div>
-                </div><div class="col-xl-3 col-md-6">
-                    <div class="doctor-widget">
-                        <div class="doctor-box-icon flex-shrink-0">
-                            <img src="assets/img/icons/doctor-dash-04.svg" alt="">
+                </div>
+        
+                <!-- Estudiantes atendidos -->
+                <div class="col-xl-3 col-md-6">
+                    <div class="attendance-widget">
+                        <div class="attendance-box-icon flex-shrink-0">
+                            <img src="assets/img/icons/student-attendance-04.svg" alt="Estudiantes Atendidos">
                         </div>
-                        <div class="doctor-content dash-count flex-grow-1">
-                            <h4>$<span class="counter-up" [countUp]="530" [options]="{duration: 10}">530</span><span></span><span class="status-green">+50%</span></h4>
-                            <h5>Earnings</h5>
+                        <div class="attendance-content dash-count flex-grow-1">
+                            <h4><span class="counter-up" [countUp]="530" [options]="{duration: 10}">530</span><span></span><span class="status-green">+50%</span></h4>
+                            <h5>Estudiantes Atendidos</h5>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
+
         <div class="row">
-            <div class="col-12 col-md-12 col-lg-12 col-xl-7">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="chart-title patient-visit mb-0">
-                            <h4>Income</h4>
-                            <div class="income-value" >
-                                <h3><span>$</span> 20,560</h3>
-                                <p><span class="passive-view"><i class="feather icon-arrow-up-right me-1"></i>40%</span> vs last month</p>
-                            </div>
-                            <div class="form-group mb-0">
-                                 <mat-select [(ngModel)]="selectedValue" class="form-control select"  placeholder="2022">
-                                        <mat-option *ngFor="let data of selecedList" [value]="data.value">
-                                          {{data.value}}
-                                        </mat-option>
-                                </mat-select>
-                            </div>
-                        </div>	
-                        <div id="apexcharts-area">
-                            <apx-chart
-                            [series]="chartOptionsOne.series"
-                            [chart]="chartOptionsOne.chart"
-                            [xaxis]="chartOptionsOne.xaxis"
-                            [dataLabels]="chartOptionsOne.dataLabels"
-                            [grid]="chartOptionsOne.grid"
-                            [stroke]="chartOptionsOne.stroke"
-                            [title]="chartOptionsOne.title"
-                            [markers]="chartOptionsOne.markers"
-                            [yaxis]="chartOptionsOne.yaxis"
-                            [fill]="chartOptionsOne.fill"
-                          ></apx-chart></div>
+            <!-- Panel principal con lista de atenciones -->
+
+            <div class="container mt-5">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="carrera" class="form-label">Carrera</label>
+                      <select class="form-select" [(ngModel)]="selectedCarrera" (change)="onCarreraChange()">
+                        <option *ngFor="let carrera of carreras" [value]="carrera.name">{{ carrera.name }}</option>
+                      </select>
                     </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-12 col-lg-6 col-xl-3 d-flex">
-                <div class="card">
-                    <div class="card-body">
-                            <apx-chart class="donut-chart-radial"
-                            [series]="chartOptionsTwo.series"
-                            [chart]="chartOptionsTwo.chart"
-                            [labels]="chartOptionsTwo.labels"
-                            [responsive]="chartOptionsTwo.responsive"
-                            [dataLabels]="chartOptionsTwo.dataLabels"
-                            [legend]="chartOptionsTwo.legend"
-                          ></apx-chart>
+                  </div>
+              
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="semestre" class="form-label">Semestre</label>
+                      <select class="form-select" [(ngModel)]="selectedSemestre" (change)="onSemestreChange()">
+                        <option *ngFor="let semestre of semestres" [value]="semestre.name">{{ semestre.name }}</option>
+                      </select>
                     </div>
+                  </div>
                 </div>
-            </div>
+              
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="paralelo" class="form-label">Paralelo</label>
+                      <select class="form-select" [(ngModel)]="selectedParalelo" (change)="onParaleloChange()">
+                        <option *ngFor="let paralelo of paralelos" [value]="paralelo.name">{{ paralelo.name }}</option>
+                      </select>
+                    </div>
+                  </div>
+              
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="estudiante" class="form-label">Estudiante</label>
+                      <select class="form-select" [(ngModel)]="selectedEstudiante">
+                        <option *ngFor="let estudiante of estudiantes" [value]="estudiante">{{ estudiante }}</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="atencion" class="form-label">Tipo de Atención</label>
+                      <select class="form-select" [(ngModel)]="selectedAtencion">
+                        <option *ngFor="let atencion of atenciones" [value]="atencion">{{ atencion }}</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- Mostrar un campo para ingresar el detalle solo si se selecciona 'Revisión de Tesis' -->
+                <div *ngIf="selectedAtencion === 'Revisión de Tesis'" class="mb-3">
+                  <label for="detalleAtencion" class="form-label">Detalle de la Atención</label>
+                  <textarea class="form-control" [(ngModel)]="detalleAtencion" rows="4" placeholder="Ejemplo: El estudiante vino a las [hora] para revisar su tesis."></textarea>
+                </div>
+              
+                <!-- Mostrar el detalle ingresado de la atención -->
+                <div *ngIf="selectedEstudiante && selectedAtencion" class="alert alert-info mt-4">
+                  <strong>Detalle de la Atención:</strong> El estudiante {{ selectedEstudiante }} necesita atención para: {{ selectedAtencion }}.
+                  <div *ngIf="detalleAtencion && selectedAtencion === 'Revisión de Tesis'" class="mt-3">
+                    <strong>Detalle de la Tesis:</strong> {{ detalleAtencion }}
+                  </div>
+                </div>
+              
+                <!-- Botón para registrar la atención -->
+                <div class="d-flex justify-content-center mt-4">
+                  <button class="btn btn-primary" (click)="registrarAtencion()">Registrar Atención</button>
+                </div>
+              </div>
+              
+              
+            <!-- Panel secundario con gráfica radial (porcentaje de atenciones realizadas) -->
+         
+            <!-- Panel terciario con estadísticas de atenciones recientes -->
             <div class="col-12 col-md-12 col-lg-6 col-xl-2 d-flex">
                 <div class="struct-point">
                     <div class="card patient-structure">
                         <div class="card-body">
-                            <h5>New Patients</h5>
-                            <h3>56<span class="status-green"><img src="assets/img/icons/sort-icon-01.svg" alt="" class="me-1">60%</span></h3>
+                            <h5>Atenciones Completadas</h5>
+                            <h3>50<span class="status-green"><img src="assets/img/icons/sort-icon-01.svg" alt="" class="me-1">+40%</span></h3>
                         </div>
                     </div>
                     <div class="card patient-structure">
                         <div class="card-body">
-                            <h5>Old Patients</h5>
-                            <h3>35<span class="status-pink"><img src="assets/img/icons/sort-icon-02.svg" alt="" class="me-1">-20%</span></h3>
+                            <h5>Atenciones Pendientes</h5>
+                            <h3>20<span class="status-pink"><img src="assets/img/icons/sort-icon-02.svg" alt="" class="me-1">-10%</span></h3>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
+
+
+
         <div class="row">
-            <div class="col-12 col-md-12  col-xl-7">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="chart-title patient-visit">
-                            <h4>Activity Chart</h4>
-                            <div >
-                                <ul class="nav chat-user-total">
-                                    <li><i class="fa fa-circle low-users" aria-hidden="true"></i>Low</li>
-                                    <li><i class="fa fa-circle current-users" aria-hidden="true"></i> High</li>
-                                </ul>
-                            </div>
-                            <div class="form-group mb-0">
-                                <mat-select [(ngModel)]="selectedValue" class="form-control select"  placeholder="This Week">
-                                    <mat-option *ngFor="let data of selecedLists" [value]="data.value">
-                                      {{data.value}}
-                                    </mat-option>
-                                </mat-select>
-                            </div>
-                        </div>	
-                        <div id="activity-chart"> 
-                            <apx-chart
-                            [series]="chartOptionsThree.series"
-                            [chart]="chartOptionsThree.chart"
-                            [dataLabels]="chartOptionsThree.dataLabels"
-                            [plotOptions]="chartOptionsThree.plotOptions"
-                            [yaxis]="chartOptionsThree.yaxis"
-                            [legend]="chartOptionsThree.legend"
-                            [fill]="chartOptionsThree.fill"
-                            [stroke]="chartOptionsThree.stroke"
-                            [tooltip]="chartOptionsThree.tooltip"
-                            [xaxis]="chartOptionsThree.xaxis"
-                            [grid]="chartOptionsThree.grid"
-                            [xaxis]="chartOptionsThree.xaxis"
-                            [yaxis]="chartOptionsThree.yaxis"
-                          ></apx-chart></div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-12  col-xl-9">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title d-inline-block">Recent Appointments</h4> <a [routerLink]="routes.appointmentList" class="patient-views float-end">Show all</a>
-                            </div>
-                            <div class="card-body p-0 table-dash">
-                                <div class="table-responsive">
-                                    <table class="table mb-0 border-0 custom-table">
-                                        <tbody>
-                                            <tr>
-                                                <td class="table-image appoint-doctor">
-                                                    <img width="28" height="28" class="rounded-circle" src="assets/img/profiles/avatar-02.jpg" alt=""> 
-                                                    <h2>Dr.Jenny Smith</h2>
-                                                </td>
-                                                <td class="appoint-time text-center">
-                                                    <h6>Today 5:40 PM</h6>
-                                                    <span>Typoid Fever</span>
-                                                </td>
-                                                <td>
-                                                    <button class="check-point status-green me-1"><i class="feather icon-check"></i></button>
-                                                    <button class="check-point status-pink "><i class="feather icon-x"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="table-image appoint-doctor">
-                                                    <img width="28" height="28" class="rounded-circle" src="assets/img/profiles/avatar-03.jpg" alt=""> 
-                                                    <h2>Dr.Angelica Ramos</h2>
-                                                </td>
-                                                <td class="appoint-time text-center">
-                                                    <h6>Today 5:40 PM</h6>
-                                                    <span>Typoid Fever</span>
-                                                </td>
-                                                <td>
-                                                    <button class="check-point status-green me-1"><i class="feather icon-check"></i></button>
-                                                    <button class="check-point status-pink "><i class="feather icon-x"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="table-image appoint-doctor">
-                                                    <img width="28" height="28" class="rounded-circle" src="assets/img/profiles/avatar-04.jpg" alt=""> 
-                                                    <h2>Dr.Martin Doe</h2>
-                                                </td>
-                                                <td class="appoint-time text-center">
-                                                    <h6>Today 5:40 PM</h6>
-                                                    <span>Typoid Fever</span>
-                                                </td>
-                                                <td>
-                                                    <button class="check-point status-green me-1"><i class="feather icon-check"></i></button>
-                                                    <button class="check-point status-pink "><i class="feather icon-x"></i></button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-12  col-xl-3 d-flex">
-                        <div class="card wallet-widget">
-                            <div class="circle-bar circle-bar2">
-                                <circle-progress class="circle-progress-bar" [percent]="66" [clockwise]="true"
-                                innerStrokeColor=#dee2e6 outerStrokeColor=#2E37A4></circle-progress>
-                                <div class="circle-progress-icon">
-                                    <b><img src="assets/img/icons/timer.svg" alt=""></b>
-                                </div>
-                            </div>
-                            <div class="main-limit">
-                                <p>Next Appointment in</p>
-                                <h4>02h:12m</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
             <div class="col-12 col-lg-12 col-xl-5 d-flex">
                 <div class="card flex-fill comman-shadow">
                     <div class="card-header">
@@ -327,4 +265,4 @@
             </div>
         </div>
     </div>
-</div>-->
+</div>

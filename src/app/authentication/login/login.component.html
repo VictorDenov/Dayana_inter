@@ -1,120 +1,131 @@
-<div class="main-wrapper login-body">
-  <div class="container-fluid px-0">
-    
-    <div class="row">
-      <div class="login-wrap-bg">
-        <div class="container text-center">
-          <h1>Sistema de Atención a Estudiantes del Instituto Superior Riobamba</h1>
-        </div>
-        <div class="login-wrapper">
-          <div class="loginbox">
-            <div class="login-right">
-              <div class="login-right-wrap">
-                <h2>Iniciar Sesión</h2>
-                <!-- Formulario -->
-                <form [formGroup]="form" (ngSubmit)="loginFormSubmit()">
-                  <div class="form-group">
-                    <label for="Email">Correo Electrónico <span class="login-danger">*</span></label>
-                    <input
-                      class="form-control"
-                      formControlName="email"
-                      type="text"
-                      [ngClass]="{
-                        'is-invalid': f['email'].touched && f['email'].invalid
-                      }"
-                    />
-                    <div
-                      *ngIf="f['email'].touched && f['email'].invalid"
-                      class="invalid-feedback"
-                    >
-                      <div
-                        *ngIf="f['email'].errors && f['email'].errors['required']"
-                      >
-                        El correo electrónico es obligatorio.
-                      </div>
-                      <div
-                        *ngIf="f['email'].errors && f['email'].errors['email']"
-                      >
-                        Por favor, introduce una dirección de correo válida.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="Password">Contraseña <span class="login-danger">*</span></label>
-                    <input
-                      class="form-control pass-input"
-                      [type]="passwordClass ? 'text' : 'password'"
-                      formControlName="password"
-                      [ngClass]="{
-                        'is-invalid': f['password'].touched && f['password'].invalid
-                      }"
-                    />
-                    <div
-                      *ngIf="f['password'].touched && f['password'].invalid"
-                      class="invalid-feedback"
-                    >
-                      <div
-                        *ngIf="
-                          f['password'].errors &&
-                          f['password'].errors['required']
-                        "
-                      >
-                        La contraseña es obligatoria.
-                      </div>
-                    </div>
-                    <span (click)="togglePassword()" (keyup.enter)="togglePassword()" [ngClass]="passwordClass ? 'feather icon-eye' : 'feather icon-eye-off'"
-                      class="profile-views toggle-password" tabindex="0"
-                    ></span>
-                  </div>
-                  <div class="forgotpass">
-                    <div class="remember-me">
-                      <label
-                        class="custom_check mr-2 mb-0 d-inline-flex remember-me"
-                      >
-                        Recuérdame
-                        <input type="checkbox" name="radio" />
-                        <span class="checkmark"></span>
-                      </label>
-                    </div>
-                    <a [routerLink]="routes.forgotPassword">¿Olvidaste tu contraseña?</a>
-                  </div>
-                  <div class="form-group login-btn">
-                    <button
-                      [disabled]="form.invalid"
-                      class="btn btn-primary btn-block"
-                      type="submit"
-                    >
-                      Iniciar Sesión
-                    </button>
-                  </div>
-                </form>
-                <!-- /Formulario -->
+<header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-body">
+    <div class="container-fluid">
+      <button
+        data-mdb-collapse-init
+        class="navbar-toggler"
+        type="button"
+        data-mdb-target="#navbarExample01"
+        aria-controls="navbarExample01"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarExample01">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar -->
 
-                <div class="next-sign">
-                  <p class="account-subtitle">
-                    ¿Necesitas una cuenta?
-                    <a [routerLink]="routes.register">Regístrate</a>
-                  </p>
+  <!-- Jumbotron -->
+  <div class="p-5 text-center bg-body-tertiary">
+    <h1 class="mb-3">Heading</h1>
+    <h4 class="mb-3">Subheading</h4>
+    <a data-mdb-ripple-init class="btn btn-primary" href="" role="button">Call to action</a>
+  </div>
+  <!-- Jumbotron -->
+</header>
 
-                  <!-- Inicio de Sesión con Redes Sociales -->
-                  <div class="social-login">
-                    <a href="javascript:;">
-                      <img src="assets/img/icons/login-icon-01.svg" alt="" />
-                    </a>
-                    <a href="javascript:;">
-                      <img src="assets/img/icons/login-icon-02.svg" alt="" />
-                    </a>
-                    <a href="javascript:;">
-                      <img src="assets/img/icons/login-icon-03.svg" alt="" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+<div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center bg-light">
+  <div class="card shadow-lg p-5" style="width: 100%; max-width: 500px;">
+    <div class="text-center mb-4">
+      <h1 class="display-4 text-primary">Sistema de Atención a Estudiantes</h1>
+      <p class="lead text-muted">Del Instituto Superior Riobamba</p>
+    </div>
+    <div class="card-body">
+      <h2 class="h3 text-center text-secondary mb-4">Iniciar Sesión</h2>
+      
+      <!-- Formulario -->
+      <form [formGroup]="form" (ngSubmit)="loginFormSubmit()">
+        
+        <!-- Correo electrónico -->
+        <div class="mb-4">
+          <label for="Email" class="form-label">Correo Electrónico <span class="text-danger">*</span></label>
+          <input
+            class="form-control"
+            formControlName="email"
+            type="email"
+            [ngClass]="{'is-invalid': f['email'].touched && f['email'].invalid}"
+          />
+          <div *ngIf="f['email'].touched && f['email'].invalid" class="invalid-feedback">
+            <div *ngIf="f['email'].errors?.['required']">El correo electrónico es obligatorio.</div>
+            <div *ngIf="f['email'].errors?.['email']">Por favor, introduce una dirección de correo válida.</div>
           </div>
         </div>
+
+        <!-- Contraseña -->
+        <div class="mb-4">
+          <label for="Password" class="form-label">Contraseña <span class="text-danger">*</span></label>
+          <div class="position-relative">
+            <input
+              class="form-control"
+              [type]="passwordClass ? 'text' : 'password'"
+              formControlName="password"
+              [ngClass]="{'is-invalid': f['password'].touched && f['password'].invalid}"
+            />
+            <span (click)="togglePassword()" class="position-absolute top-50 end-0 translate-middle-y me-3 cursor-pointer">
+              <i [ngClass]="passwordClass ? 'bi bi-eye' : 'bi bi-eye-slash'"></i>
+            </span>
+          </div>
+          <div *ngIf="f['password'].touched && f['password'].invalid" class="invalid-feedback">
+            <div *ngIf="f['password'].errors?.['required']">La contraseña es obligatoria.</div>
+          </div>
+        </div>
+
+        <!-- Recordar sesión -->
+        <div class="d-flex justify-content-between mb-4">
+          <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" /> Recuérdame
+          </label>
+          <a [routerLink]="routes.forgotPassword" class="text-decoration-none text-primary">¿Olvidaste tu contraseña?</a>
+        </div>
+
+        <!-- Botón de inicio de sesión -->
+        <div class="mb-4">
+          <button
+            [disabled]="form.invalid"
+            class="btn btn-primary w-100"
+            type="submit"
+          >
+            Iniciar Sesión
+          </button>
+        </div>
+      </form>
+
+      <!-- Enlace para registro -->
+      <div class="text-center">
+        <p class="small">¿No tienes cuenta? <a [routerLink]="routes.register" class="text-primary">Regístrate aquí</a></p>
+      </div>
+
+      <!-- Redes Sociales -->
+      <div class="d-flex justify-content-center mt-4">
+        <a href="javascript:;" class="text-muted me-3">
+          <img src="assets/img/icons/login-icon-01.svg" alt="Facebook" width="40" height="40" />
+        </a>
+        <a href="javascript:;" class="text-muted me-3">
+          <img src="assets/img/icons/login-icon-02.svg" alt="Google" width="40" height="40" />
+        </a>
+        <a href="javascript:;" class="text-muted">
+          <img src="assets/img/icons/login-icon-03.svg" alt="Twitter" width="40" height="40" />
+        </a>
       </div>
     </div>
   </div>
 </div>
-
