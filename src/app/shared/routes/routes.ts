@@ -364,4 +364,14 @@ export class routes {
   public static get listadoRole(): string {
     return this.baseUrl + '/roles/list';
   }
+
+
+  public static get  studentList(): string {
+    return this.baseUrl + '/estudiantes/lista';
+  }
+
+  public static get   attendedAppointments(): string {
+    return this.baseUrl + '/estudiantes/lista';
+  }
+ 
 }
