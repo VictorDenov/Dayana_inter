@@ -1,7 +1,7 @@
 
 
 
-<div class="page-wrapper">
+<div  class="page-wrapper">
     <div class="content">
         <div class="page-header">
             <div class="row">
@@ -16,54 +16,154 @@
         </div>
         <!-- /Page Header -->
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-auto-12">
 
                 <div class="card">
                     <div class="card-body">
-                        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+
+                        <form (ngSubmit)="onCreate()" [formGroup]="docenteForm" novalidate>
                             <div class="row">
                                 <div class="col-12">
                                     <div class="form-heading">
-                                        <h4>Detalles Docentes</h4>
+                                        <h4>Agregar Docentes</h4>
                                     </div>
                                 </div>
+                                
+                                <!-- Primer Nombre -->
                                 <div class="col-12 col-md-6 col-xl-4">
                                     <div class="form-group local-forms">
-                                        <label for="nombre">Nombre <span class="login-danger">*</span></label>
-                                        <input class="form-control" type="text" placeholder="" name="nombre" id="nombre"  [(ngModel)]="nombre">
+                                        <label for="Primernombre">Primer Nombre <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="text" formControlName="Primernombre" placeholder="Primernombre">
                                     </div>
                                 </div>
+                        
+                                <!-- Segundo Nombre -->
                                 <div class="col-12 col-md-6 col-xl-4">
                                     <div class="form-group local-forms">
-                                        <label for="nombreDocente">Nombre Usuario <span class="login-danger">*</span></label>
-                                        <input class="form-control" type="text" placeholder=""  id="nombreDocente" name="nombreDocente"  [(ngModel)]="nombreDocente">
+                                        <label for="Segundonombre">Segundo Nombre <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="text" formControlName="Segundonombre" placeholder="Segundo Nombre">
                                     </div>
                                 </div>
-                               
-                              
+                        
+                                <!-- Primer Apellido -->
+                                <div class="col-12 col-md-6 col-xl-6">
+                                    <div class="form-group local-forms">
+                                        <label for="PrimerApellido">Primer Apellido <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="text" formControlName="PrimerApellido" placeholder="Primer Apellido">
+                                    </div>
+                                </div>
+                        
+                                <!-- Segundo Apellido -->
+                                <div class="col-12 col-md-6 col-xl-6">
+                                    <div class="form-group local-forms">
+                                        <label for="SegundoApellido">Segundo Apellido <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="text" formControlName="SegundoApellido" placeholder="Segundo Apellido">
+                                    </div>
+                                </div>
+                        
+                                <!-- Cédula -->
+                                <div class="col-12 col-md-6 col-xl-6">
+                                    <div class="form-group local-forms">
+                                        <label for="Cedula">Numero de Cédula <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="text" formControlName="Cedula" placeholder="Número de Cédula">
+                                    </div>
+                                </div>
+                        
+                                <!-- Titulo Tercer Nivel -->
+                                <div class="col-12 col-md-6 col-xl-6">
+                                    <div class="form-group local-forms">
+                                        <label for="TituloTercerNivel">Titulo de Tercer Nivel <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="text" formControlName="TituloTercerNivel" placeholder="Título de Tercer Nivel">
+                                    </div>
+                                </div>
+                        
+                                <!-- Titulo Posgrado -->
+                                <div class="col-12 col-md-6 col-xl-6">
+                                    <div class="form-group local-forms">
+                                        <label for="TituloPosgrado">Títulos de Posgrado <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="text" formControlName="TituloPosgrado" placeholder="Títulos de Posgrado">
+                                    </div>
+                                </div>
+                        
+                                <!-- Carrera -->
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="form-group local-forms">
+                                        <label for="carrera">Carrera <span class="login-danger">*</span></label>
+                                        <mat-select formControlName="carrera" class="form-control select" placeholder="Selecciona la Carrera">
+                                            <mat-option *ngFor="let data of selectedList1" [value]="data.value">{{data.value}}</mat-option>
+                                        </mat-select>
+                                    </div>
+                                </div>
+                        
+                                <!-- Campus -->
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="form-group local-forms">
+                                        <label for="Campus">Campus <span class="login-danger">*</span></label>
+                                        <mat-select formControlName="Campus" class="form-control select" placeholder="Selecciona el Campus">
+                                            <mat-option *ngFor="let data of selectedList2" [value]="data.value">{{data.value}}</mat-option>
+                                        </mat-select>
+                                    </div>
+                                </div>
+                        
+                                <!-- Período Académico -->
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="form-group local-forms">
+                                        <label for="PeriodoAcademico">Período Académico <span class="login-danger">*</span></label>
+                                        <mat-select formControlName="PeriodoAcademico" class="form-control select" placeholder="Selecciona el Periodo Académico">
+                                            <mat-option *ngFor="let data of selectedList3" [value]="data.value">{{data.value}}</mat-option>
+                                        </mat-select>
+                                    </div>
+                                </div>
+                        
+                                <!-- Email -->
                                 <div class="col-12 col-md-6 col-xl-6">
                                     <div class="form-group local-forms">
                                         <label for="email">Email <span class="login-danger">*</span></label>
-                                        <input class="form-control" type="email" placeholder="" id="email" name="email"  [(ngModel)]="email">
+                                        <input class="form-control" type="email" formControlName="email" placeholder="Email">
                                     </div>
                                 </div>
+                        
+                                <!-- Password -->
                                 <div class="col-12 col-md-6 col-xl-6">
                                     <div class="form-group local-forms">
-                                        <label for="Password">Password <span class="login-danger">*</span></label>
-                                        <input class="form-control" type="password" placeholder="" id="Password" name="Password"  [(ngModel)]="password">
+                                        <label for="password">Password <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="password" formControlName="password" placeholder="Password">
                                     </div>
                                 </div>
-                            
+                        
+                                <!-- Foto Perfil -->
+                                <div class="col-12 col-md-6 col-xl-6">
+                                    <div class="form-group local-top-form">
+                                        <label for="avator" class="local-top">Foto perfil <span class="login-danger">*</span></label>
+                                        <div class="settings-btn upload-files-avator">
+                                            <input type="file" accept="image/*" formControlName="imagenes" (change)="onFileChange($event)" class="hide-input">
+                                            <label for="file" class="upload">Subir Foto</label>
+                                        </div>
+                                        <div class="upload-images upload-size" *ngIf="deleteIcon">
+                                            <img [src]="imageUrl || 'assets/img/favicon.png'" alt="Image">
+                                            <a (click)="deleteIconFunc()" href="javascript:void(0);" class="btn-icon logo-hide-btn">
+                                                <i class="feather icon-x-circle"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <!-- Botones -->
                                 <div class="col-12">
                                     <div class="doctor-submit text-end">
-                                        <button type="submit" class="btn btn-primary submit-form me-2" [disabled]="!f.valid">Enviar</button>
-                                        <button type="submit" class="btn btn-primary cancel-form">Cancel</button>
+                                        <button type="submit" class="btn btn-primary submit-form me-2" [disabled]="!docenteForm.valid">Enviar</button>
+                                        <button type="button" class="btn btn-primary cancel-form">Cancelar</button>
                                     </div>
                                 </div>
                             </div>
                         </form>
+                        
+
+
                     </div>
                 </div>
+
+                
             </div>
         </div>
     </div>

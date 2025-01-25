@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { ToastrModule } from 'ngx-toastr';
+import { TokenService } from './authentication/services/token.service';
+import { AdminInterceptor } from './interceptores/admin.interceptor';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,7 @@ import { ToastrModule } from 'ngx-toastr';
     SharedModule,
     ToastrModule.forRoot(),
   ],
-  providers: [],
+  providers: [AdminInterceptor,TokenService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

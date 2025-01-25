@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { routes } from 'src/app/shared/routes/routes';
 import {
   ApexAxisChartSeries,
@@ -17,6 +17,7 @@ import {
 import { Sort } from '@angular/material/sort';
 import { DataService } from 'src/app/shared/data/data.service';
 import { recentPatients, upcomingAppointments } from 'src/app/shared/models/models';
+import { TokenService } from 'src/app/authentication/services/token.service';
 export type ChartOptions = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   series: ApexAxisChartSeries | any;
@@ -53,9 +54,12 @@ interface data {
   templateUrl: './admin-dashboard.component.html',
   styleUrls: ['./admin-dashboard.component.scss'],
 })
-export class AdminDashboardComponent {
+export class AdminDashboardComponent{
   // Definir las rutas
   public routes = routes;
+
+
+ 
 
   // Datos de ejemplo para estudiantes
   public registeredStudents = [
@@ -114,6 +118,9 @@ export class AdminDashboardComponent {
     }
   ];
 
+
+ 
+
   constructor() { }
 
   // Método para manejar el ordenamiento de datos (si es necesario)
@@ -122,5 +129,10 @@ export class AdminDashboardComponent {
     console.log('Ordenando datos...', event);
   }
 
+  ngOnInit(): void {
+   
+   }
+ 
+ 
 
 }

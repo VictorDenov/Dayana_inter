@@ -2,6 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AcademicoComponent } from './academico.component';
 import { AuthGuard } from '../shared/gaurd/auth.guard';
+import { LoginGuard } from '../shared/gaurd/login.guard';
 
 const routes: Routes = [
   {

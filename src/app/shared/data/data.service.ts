@@ -9,6 +9,9 @@ import { apiResultFormat } from '../models/models';
   providedIn: 'root',
 })
 export class DataService {
+Primernombre: any;
+PrimerApellido: any;
+imagenes: any;
   constructor(private http: HttpClient) {}
 
   public getDoctorsList(): Observable<apiResultFormat> {
@@ -193,6 +196,8 @@ export class DataService {
       })
     );
   }
+
+  
   public sideBar = [
     {
       tittle: 'Navegador',

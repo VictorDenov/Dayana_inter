@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { routes } from 'src/app/shared/routes/routes';
 import {
   ChartComponent,
@@ -17,6 +17,7 @@ import {
   ApexLegend,
   ApexTooltip,
 } from 'ng-apexcharts';
+import { TokenService } from 'src/app/authentication/services/token.service';
 interface data {
   value: string ;
 }
@@ -61,8 +62,18 @@ export type ChartOptions = {
 })
 
 
-export class DashboardDocenteComponent {
+export class DashboardDocenteComponent implements OnInit {
+
+  userName: string | null = '';
   public routes = routes;
+
+
+  ngOnInit(): void {
+    // Llamamos a TokenService para obtener el nombre del docente desde el token
+    this.userName = this.tokenService.getNombreDocente();
+  }
+
+  constructor(public tokenService: TokenService) { }
 
   // Lista de carreras con semestres, paralelos y estudiantes
   carreras = [
@@ -138,5 +149,6 @@ export class DashboardDocenteComponent {
     // Aquí puedes agregar el código para registrar la atención en una base de datos o en el sistema
   }
 
-  constructor() { }
+
+
 }

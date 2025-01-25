@@ -1,6 +1,7 @@
 export class routes {
 
   private static Url = '';
+  static estudianteDashboard: any;
 
   public static get baseUrl(): string {
     return this.Url;

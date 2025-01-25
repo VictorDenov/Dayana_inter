@@ -49,6 +49,17 @@
       <h1 class="display-4 text-primary">Sistema de Atención a Estudiantes</h1>
       <p class="lead text-muted">Del Instituto Superior Riobamba</p>
     </div>
+
+    <div class="mb-3">
+      <label for="role" class="form-label">Selecciona un Usuario:</label>
+      <select id="role" class="form-select" [(ngModel)]="selectedRole">
+        <option value="docente">Docente</option>
+        <option value="estudiante">Estudiante</option>
+        <option value="admin">Admin</option>
+      </select>
+    </div>
+    
+    
     <div class="card-body">
       <h2 class="h3 text-center text-secondary mb-4">Iniciar Sesión</h2>
       
@@ -80,14 +91,30 @@
               formControlName="password"
               [ngClass]="{'is-invalid': f['password'].touched && f['password'].invalid}"
             />
-            <span (click)="togglePassword()" class="position-absolute top-50 end-0 translate-middle-y me-3 cursor-pointer">
-              <i [ngClass]="passwordClass ? 'bi bi-eye' : 'bi bi-eye-slash'"></i>
-            </span>
+            
           </div>
           <div *ngIf="f['password'].touched && f['password'].invalid" class="invalid-feedback">
             <div *ngIf="f['password'].errors?.['required']">La contraseña es obligatoria.</div>
           </div>
         </div>
+
+        <div
+        class="alert alert-danger alert-dismissible fade show"
+        role="alert"
+        *ngIf="ERROR">
+        <strong>Error!</strong>
+        {{ errorMessage }} <!-- Mostrar el mensaje de error aquí -->
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+          (click)="ERROR = false"> <!-- Cerrar el mensaje de error -->
+          <span aria-hidden="true"> </span>
+        </button>
+      </div>
+      
+      
 
         <!-- Recordar sesión -->
         <div class="d-flex justify-content-between mb-4">
