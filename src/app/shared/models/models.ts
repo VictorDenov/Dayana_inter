@@ -99,16 +99,54 @@ export interface invoicerecurring {
   status: string;
   img: string;
 }
-export interface doctorlist {
-  name: string;
-  department: string;
-  specialization: string;
-  degree: string;
-  mobile: string;
+
+export interface docentelist {
+  PrimerNombre: string;
+  SegundoNombre: string;
+  PrimerApellido: string;
+  SegundoApellido: string;
+  Cedula: number;
+  TituloTercerNivel: string;
+  TituloPosgrado: string;
+
+  carrera: {  // Cambio de string a objeto con propiedades de la carrera
+    id: number;
+    nombreCarrera: string;
+  };
+  Campus: string;
+  PeriodoAcademico: string;
   email: string;
-  joiningDate: number;
-  img: string;
+  imagenes: Array<{   // Relación de imágenes, con URL y public_id
+    id: number;
+    url: string;
+    public_id: string;
+  }>;
 }
+
+
+export interface docenteagregar {
+  PrimerNombre: string;
+  SegundoNombre: string;
+  PrimerApellido: string;
+  SegundoApellido: string;
+  Cedula: number;
+  TituloTercerNivel: string;
+  TituloPosgrado: string;
+  
+  carrera: {  // Cambio de string a objeto con propiedades de la carrera
+    id: number;
+    nombreCarrera: string;
+  };
+  Campus: string;
+  PeriodoAcademico: string;
+  email: string;
+  imagenes: Array<{   // Relación de imágenes, con URL y public_id
+    id: number;
+    url: string;
+    public_id: string;
+  }>;
+}
+
 export interface schedule {
   doctorName: string;
   department: string;

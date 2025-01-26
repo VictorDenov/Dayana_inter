@@ -27,7 +27,7 @@
               <div class="row align-items-center">
                 <div class="col">
                   <div class="doctor-table-blk">
-                    <h3>Lista Docentes</h3>
+                    <h3>Datos Generales del Docente</h3>
                     <div class="doctor-search-blk">
                       <div class="top-nav-search table-search-blk">
                         <input
@@ -82,7 +82,7 @@
                       src="assets/img/icons/pdf-icon-03.svg"
                       alt>
                   </a>
-                  <a href="javascript:;">
+                  <a href="javascript:; "  >
                     <img
                       src="assets/img/icons/pdf-icon-04.svg"
                       alt>
@@ -93,180 +93,105 @@
             <!-- /Table Header -->
 
             <div class="table-responsive">
-              <table
-                matSort
-                (matSortChange)="sortData($event)"
-                class="table border-0 custom-table comman-table datatable mb-0">
+              <table matSort class="table">
                 <thead>
                   <tr>
-                    <th mat-sort-header="checkbox">
-                      <div class="form-check check-tables">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value="something">
-                      </div>
-                    </th>
-                    <th mat-sort-header="name">Nombre</th>
-                    <th mat-sort-header="department">Apellido</th>
-                    <th mat-sort-header="specialization">Email</th>
-                    <th mat-sort-header="degree">Degree</th>
-                    <th mat-sort-header="mobile">Mobile</th>
-                    <th mat-sort-header="email">Email</th>
-                    <th mat-sort-header="joiningDate">Joining Date</th>
-                    <th></th>
+                    <th mat-sort-header="PrimerNombre">Marcar</th>
+                    <th mat-sort-header="PrimerNombre">Foto</th>
+                    <th mat-sort-header="PrimerNombre">Apellidos y Nombre</th>
+                    <th mat-sort-header="NumeroCedula">Cédula</th>
+                    <th mat-sort-header="TitulosTercerNivel">Títulos de Tercer Nivel</th>
+                    <th mat-sort-header="TitulosPosgrados">Títulos de Posgrado</th>
+                    <th mat-sort-header="carrera">Carrera</th>
+                    <th mat-sort-header="Campus">Campus</th>
+                    <th mat-sort-header="PeriodoAcademico">Período Académico</th>
+                    <th mat-sort-header="CorreoElectronico">Correo Electrónico</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let data of docenteLista">
+                  <tr *ngFor="let docente of docenteLista">
                     <td>
                       <div class="form-check check-tables">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          value="something">
+                          <input class="form-check-input" type="checkbox" value="something">
                       </div>
+                  </td>
+
+                    <td class="profile-image">
+                      <a [routerLink]="routes.profile">
+                        <!-- Mostrar la primera imagen del array de imágenes -->
+                        <img
+                          width="28"
+                          height="28"
+                          [src]="docente.imagenes[0]?.url || ''"  
+                          class="rounded-circle m-r-5"
+                          alt="Profile image"
+                        />
+                        {{ data.Primernombre }} {{ data.PrimerApellido }} <!-- Nombre del docente -->
+                      </a>
                     </td>
-                    <td>{{ data.nombre }}</td>
-                    <td>{{ data.apellido }}</td>
-                    <td>{{ data.email }}</td>
-                    <td>{{ data.roles }}</td>
-                    <td>
-                      <a href="javascript:;">{{ data.carrera }}</a>
-                    </td>
-                    <td>{{ data.password }}</td>
-                    <td>{{ data.email }}</td>
-                    <td class="text-end">
-                      <div class="dropdown dropdown-action">
-                        <a
-                          href="javascript:void(0);"
-                          class="action-icon dropdown-toggle"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false">
-                          <i class="fa fa-ellipsis-v"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                          <a
-                            class="dropdown-item"
-                            [routerLink]="routes.editDoctor">
-                            <i class="fa-solid fa-pen-to-square m-r-5"></i>
-                            Edit
-                          </a>
-                          <a
-                            class="dropdown-item"
-                            href="javascript:void(0);"
-                            data-bs-toggle="modal"
-                            data-bs-target="#delete_patient">
-                            <i class="fa fa-trash-alt m-r-5"></i>
-                            Delete
-                          </a>
-                        </div>
-                      </div>
-                    </td>
+                    <!-- Apellidos y Nombre -->
+                    <td>{{ docente.PrimerApellido }} {{ docente.SegundoApellido }} {{ docente.PrimerNombre }} {{ docente.SegundoNombre }}</td>
+                    
+                    <!-- Cédula -->
+                    <td>{{ docente.Cedula }}</td>
+                    
+                    <!-- Títulos de Tercer Nivel -->
+                    <td>{{ docente.TituloTercerNivel }}</td>
+                    
+                    <!-- Títulos de Posgrado -->
+                    <td>{{ docente.TituloPosgrado }}</td>
+                    
+                    <!-- Carrera -->
+                    <td>{{ docente.carrera.nombreCarrera }}</td>
+                    
+                    <!-- Campus -->
+                    <td>{{ docente.Campus }}</td>
+                    
+                    <!-- Período Académico -->
+                    <td>{{ docente.PeriodoAcademico }}</td>
+                    
+                    <!-- Correo Electrónico -->
+                    <td>{{ docente.email }}</td>
                   </tr>
                 </tbody>
               </table>
+              
+              <!-- Paginado de la tabla -->
               <div class="table_footer">
                 <div class="col-sm-12 col-md-5">
                   <div class="dataTables_info">
-                    Showing {{ serialNumberArray[0] }} to
-                    {{ serialNumberArray[serialNumberArray.length - 1] }} of
-                    {{ totalData }} entries
+                    Showing {{ serialNumberArray[0] }} to {{ serialNumberArray[serialNumberArray.length - 1] }} of {{ totalData }} entries
                   </div>
                 </div>
-
+            
                 <div class="col-sm-12 col-md-7">
                   <div class="pagination_section">
                     <ul class="pagination">
-                      <li
-                        class="page-item"
-                        [ngClass]="{
-                          disabled: currentPage === 1
-                        }">
-                        <a
-                          (click)="getMoreData('previous')"
-                          class="page-link"
-                          href="javascript:void(0);"
-                          tabindex="-1">
-                          Previous
-                        </a>
+                      <li class="page-item" [ngClass]="{ disabled: currentPage === 1 }">
+                        <a (click)="getMoreData('previous')" class="page-link" href="javascript:void(0);" tabindex="-1">Previous</a>
                       </li>
-
-                      <ng-container
-                        *ngFor="let item of pageNumberArray; let i = index">
-                        <li
-                          class="page-item"
-                          [class.active]="item === currentPage"
-                          [ngClass]="(pageNumberArray[currentPage - 2] > item &&
-                              item !== 1 &&
-                              pageNumberArray.length > 6) ||
-                            (pageNumberArray[currentPage] < item &&
-                              item !== 1 &&
-                              pageNumberArray.length > 6 &&
-                              pageNumberArray.length !== item)
-                              ? 'hide-page-no'
-                              : 'show-page-no'">
-                          <a
-                            (click)="moveToPage(item)"
-                            class="page-link"
-                            href="javascript:void(0);">
-                            {{ item }}
-                          </a>
+            
+                      <ng-container *ngFor="let item of pageNumberArray; let i = index">
+                        <li class="page-item" [class.active]="item === currentPage" [ngClass]="(pageNumberArray[currentPage - 2] > item && item !== 1 && pageNumberArray.length > 6) || (pageNumberArray[currentPage] < item && item !== 1 && pageNumberArray.length > 6 && pageNumberArray.length !== item) ? 'hide-page-no' : 'show-page-no'">
+                          <a (click)="moveToPage(item)" class="page-link" href="javascript:void(0);">{{ item }}</a>
                         </li>
-                        <li
-                          class="page-item"
-                          *ngIf="i === 0 &&
-                            pageNumberArray.length > 6 &&
-                            currentPage > 2"
-                          [hidden]="currentPage === 1"
-                          (click)="moveToPage(currentPage - 2)"
-                          (keyup.enter)="moveToPage(currentPage - 2)"
-                          tabindex="0">
-                          <a
-                            class="page-link"
-                            href="javascript:void(0);">
-                            ...
-                          </a>
+                        <li *ngIf="i === 0 && pageNumberArray.length > 6 && currentPage > 2" [hidden]="currentPage === 1" (click)="moveToPage(currentPage - 2)" tabindex="0">
+                          <a class="page-link" href="javascript:void(0);">...</a>
                         </li>
-                        <li
-                          *ngIf="i === pageNumberArray.length - 2 &&
-                            pageNumberArray.length > 6"
-                          [hidden]="currentPage >=
-                              pageNumberArray[pageNumberArray.length - 2] ||
-                            totalData <
-                              serialNumberArray[serialNumberArray.length - 1]"
-                          class="page-item"
-                          (click)="moveToPage(currentPage + 2)"
-                          (keyup.enter)="moveToPage(currentPage + 2)"
-                          tabindex="0">
-                          <a
-                            class="page-link"
-                            href="javascript:void(0);">
-                            ...
-                          </a>
+                        <li *ngIf="i === pageNumberArray.length - 2 && pageNumberArray.length > 6" [hidden]="currentPage >= pageNumberArray[pageNumberArray.length - 2] || totalData < serialNumberArray[serialNumberArray.length - 1]" class="page-item" (click)="moveToPage(currentPage + 2)" tabindex="0">
+                          <a class="page-link" href="javascript:void(0);">...</a>
                         </li>
                       </ng-container>
-
-                      <li
-                        class="page-item"
-                        [ngClass]="{
-                          disabled:
-                            currentPage ===
-                              pageNumberArray[pageNumberArray.length - 1] ||
-                              docenteLista.length === 0
-                        }">
-                        <a
-                          (click)="getMoreData('next')"
-                          class="page-link"
-                          href="javascript:void(0);">
-                          Next
-                        </a>
+            
+                      <li class="page-item" [ngClass]="{ disabled: currentPage === pageNumberArray[pageNumberArray.length - 1] || docenteLista.length === 0 }">
+                        <a (click)="getMoreData('next')" class="page-link" href="javascript:void(0);">Next</a>
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
+            
           </div>
         </div>
       </div>

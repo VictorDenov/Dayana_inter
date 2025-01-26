@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { TokenService } from 'src/app/authentication/services/token.service';
 import { DataService } from 'src/app/shared/data/data.service';
 import { MenuItem, SideBarData } from 'src/app/shared/models/models';
 import { routes } from 'src/app/shared/routes/routes';
@@ -24,7 +25,8 @@ export class SidebarComponent {
   constructor(
     private data: DataService,
     private router: Router,
-    private sideBar: SideBarService
+    private sideBar: SideBarService,
+    private tokenService: TokenService,
   ) {
     this.sidebarData = this.data.sideBar;
     router.events.subscribe((event: object) => {
@@ -66,6 +68,11 @@ export class SidebarComponent {
     } else {
       this.sideBar.expandSideBar.next("false");
     }
+  }
+
+  logOut(): void {
+    this.tokenService.logOut(); // Elimina el token y limpia la sesión
+    this.router.navigate([routes.login]); // Redirige al login después de cerrar sesión
   }
 
 }
