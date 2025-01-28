@@ -36,7 +36,7 @@
             </li>
           </ng-container>
         </ng-container>
-        <li class="submenu">
+       <!-- <li class="submenu">
           <a [ngClass]="{ subdrop: multilevel[0] }" (click)="multilevel[0] = !multilevel[0]" href="javascript:void(0);"><i class="fa fa-share-alt"></i> <span>Multi Level</span> <span
               class="menu-arrow"></span></a>
           <ul [ngClass]="
@@ -70,15 +70,20 @@
               <a href="javascript:void(0);"><span>Level 1</span></a>
             </li>
           </ul>
-        </li>
-      </ul>
+        </li>-->
+      </ul> 
       <div class="logout-btn">
+<<<<<<< Updated upstream
         <a (click)="logOut()">
           <span class="menu-side">
             <img src="assets/img/icons/logout.svg" alt="" />
           </span>
           <span>Logout</span>
         </a>
+=======
+        <a [routerLink]="routes.login"><span class="menu-side"><img src="assets/icon2/logout-3-svgrepo-com.svg" alt="" /></span>
+          <span>SALIR</span></a>
+>>>>>>> Stashed changes
       </div>
       
     </div>

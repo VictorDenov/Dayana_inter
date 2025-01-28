@@ -1,0 +1,207 @@
+<div class="page-wrapper">
+    <div class="content">
+    
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="row">
+                <div class="col-sm-12">
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a [routerLink]="routes.patientsList">Estudiantes </a></li>
+                        <li class="breadcrumb-item"><i class="feather icon-chevron-right"></i></li>
+                        <li class="breadcrumb-item active">Editar Estudiantes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Encabezado de página -->
+        <div class="row">
+            <div class="col-sm-12">
+            
+                <div class="card">
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-heading">
+                                        <h4>Detalles del Estudiante</h4>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-4">  
+                                    <div class="form-group local-forms">
+                                        <label for="name">Nombre <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="text" value=""  >
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="form-group local-forms">
+                                        <label  for="last">Apellido  <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="text" value="" >
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="form-group local-forms">
+                                        <label  for="user">Nombre de Usuario <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="text" value="" >
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-6">
+                                    <div class="form-group local-forms">
+                                         <label  for="mobile" >Teléfono Móvil <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="text" value="+593" >
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-6">
+                                    <div class="form-group local-forms">
+                                        <label for="email" >Correo Electrónico <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="email" value="example@email.com" >
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-6">
+                                    <div class="form-group local-forms">
+                                        <label  for="password">Contraseña <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="password" value="password" >
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-6">
+                                    <div class="form-group local-forms">
+                                        <label for="confirmpassword" >Confirmar Contraseña <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="password" value="password" >
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-6">
+                                    <div class="form-group local-forms">
+                                        <label for="Birth" >Fecha de Nacimiento  <span class="login-danger">*</span></label>
+                                        <input class="form-control datetimepicker" type="text"  [formControl]="date" matInput [matDatepicker]="picker">
+                                        <mat-datepicker #picker></mat-datepicker>
+                                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-6">
+                                    <div class="form-group select-gender">
+                                        <label for="Select" class="gen-label">Género<span class="login-danger">*</span></label>
+                                        <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                                <input type="radio" name="gender" class="form-check-input" checked>Masculino
+                                            </label>
+                                        </div>
+                                        <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                                <input type="radio" name="gender" class="form-check-input">Femenino
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="form-group local-forms">
+                                         <label  for="education">Educación <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="text" value="" >
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="form-group local-forms">
+                                        <label for="designation">Designación <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="text" value="" >
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <div class="form-group local-forms">
+                                         <label  for="department">Departamento <span class="login-danger">*</span></label>
+                                        <mat-select [(ngModel)]="selectedValue" [ngModelOptions]="{standalone: true}" class="form-control select"  placeholder="Seleccionar Departamento">
+                                            <mat-option *ngFor="let data of selectedList1" [value]="data.value">
+                                            {{data.value}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12">
+                                    <div class="form-group local-forms">
+                                        <label for="address">Dirección  <span class="login-danger">*</span></label>
+                                        <textarea class="form-control" rows="3" cols="30"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-3">
+                                    <div class="form-group local-forms">
+                                        <label for="city">Ciudad <span class="login-danger">*</span></label>
+                                        <mat-select [(ngModel)]="selectedValue" [ngModelOptions]="{standalone: true}" class="form-control select"  placeholder="Seleccionar Ciudad">
+                                            <mat-option *ngFor="let data of selectedList2" [value]="data.value">
+                                            {{data.value}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-3">
+                                    <div class="form-group local-forms">
+                                        <label for="Country">País  <span class="login-danger">*</span></label>
+                                        <mat-select [(ngModel)]="selectedValue" [ngModelOptions]="{standalone: true}" class="form-control select"  placeholder="Seleccionar País">
+                                            <mat-option *ngFor="let data of selectedList3" [value]="data.value">
+                                            {{data.value}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-3">
+                                    <div class="form-group local-forms">
+                                        <label for="State">Estado/Provincia <span class="login-danger">*</span></label>
+                                        <mat-select [(ngModel)]="selectedValue" [ngModelOptions]="{standalone: true}" class="form-control select"  placeholder="Seleccionar Estado">
+                                            <mat-option *ngFor="let data of selectedList4" [value]="data.value">
+                                            {{data.value}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-3">
+                                    <div class="form-group local-forms">
+                                        <label for="Postal">Código Postal <span class="login-danger">*</span></label>
+                                        <input class="form-control" type="text" value="91403" >
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12">
+                                    <div class="form-group local-forms">
+                                        <label for="Start">Biografía Inicial  <span class="login-danger">*</span></label>
+                                        <textarea class="form-control" rows="3" cols="30"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-6">
+                                    <div class="form-group local-top-form">
+                                        <label for="Avatar" class="local-top">Adjuntar <span class="login-danger">*</span></label>
+                                        <div class="settings-btn upload-files-avator">
+                                            <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" class="hide-input">
+                                            <label for="file" class="upload">Elegir Archivo</label>
+                                        </div>
+                                        <div class="upload-images upload-size"  [ngClass]="{'d-none':deleteIcon === false}">
+                                            <img src="assets/img/favicon.png" alt="Imagen">
+                                            <a (click)="deleteIconFunc()" href="javascript:void(0);" class="btn-icon logo-hide-btn">
+                                                <i class="feather icon-x-circle"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-6">
+                                    <div class="form-group select-gender">
+                                        <label for="Status" class="gen-label">Estado <span class="login-danger">*</span></label>
+                                        <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                                <input type="radio" name="gender1" class="form-check-input" checked>Activo
+                                            </label>
+                                        </div>
+                                        <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                                <input type="radio" name="gender1" class="form-check-input">Inactivo
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="doctor-submit text-end">
+                                        <button type="submit" class="btn btn-primary submit-form me-2">Enviar</button>
+                                        <button type="submit" class="btn btn-primary cancel-form">Cancelar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>							
+            </div>					
+        </div>
+    </div>
+</div>

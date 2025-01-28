@@ -2,16 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CarrerasRoutingModule } from './carreras-routing.module';
-import { CarrerasComponent } from './carreras.component';
+import { CarreraComponent } from './carreras.component';
 
 
 @NgModule({
   declarations: [
-    CarrerasComponent
+    CarreraComponent
   ],
   imports: [
     CommonModule,
     CarrerasRoutingModule
   ]
 })
-export class CarrerasModule { }
+export class CarreraModule { }

@@ -82,20 +82,39 @@ export class DashboardDocenteComponent implements OnInit {
         {
           name: 'Primer Semestre', 
           paralelos: [
-            { name: 'A', students: ['Estudiante 1', 'Estudiante 2', 'Estudiante 3'] },
-            { name: 'B', students: ['Estudiante 4', 'Estudiante 5', 'Estudiante 6'] }
+            { name: 'A', students: ['Dayana Nuñez', 'Patricio Diaz', 'Alex Parra'] },
+            { name: 'B', students: ['Lesly Tierra', 'Angelica Damian', 'Carlos Parra'] }
           ]
         },
         {
           name: 'Segundo Semestre', 
           paralelos: [
-            { name: 'A', students: ['Estudiante 7', 'Estudiante 8', 'Estudiante 9'] },
-            { name: 'B', students: ['Estudiante 10', 'Estudiante 11', 'Estudiante 12'] }
+            { name: 'A', students: ['Angie Gusqui', 'Luis Aguirre', 'Angel Peña'] },
+            { name: 'B', students: ['Fernanda Guerrero', 'Sofia Rios', 'Daniel Guevara'] }
+          ]
+        },
+      ]
+    },
+    { name: 'Rehabilitación Fisica', 
+      semestres: [
+        {
+          name: 'Primer Semestre', 
+          paralelos: [
+            { name: 'A', students: ['Dayana Nuñez', 'Patricio Diaz', 'Alex Parra'] },
+            { name: 'B', students: ['Lesly Tierra', 'Angelica Damian', 'Carlos Parra'] }
+          ]
+        },
+        {
+          name: 'Segundo Semestre', 
+          paralelos: [
+            { name: 'A', students: ['Angie Gusqui', 'Luis Aguirre', 'Angel Peña'] },
+            { name: 'B', students: ['Fernanda Guerrero', 'Sofia Rios', 'Daniel Guevara'] }
           ]
         },
       ]
     },
   ];
+  
 
   // Variables para gestionar la selección del formulario
   selectedCarrera!: string;

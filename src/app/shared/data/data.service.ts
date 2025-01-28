@@ -210,7 +210,7 @@ imagenes: any;
           showSubRoute: false,
           base: 'dashboard',
           route:'dashboard',
-          img: 'assets/img/icons/menu-icon-01.svg',
+          img: 'assets/icon2/panelc.svg',
           subMenus: [
             {
               menuValue: 'Admin',
@@ -234,7 +234,7 @@ imagenes: any;
           hasSubRoute: true,
           showSubRoute: false,
           base: 'doctor',
-          img: 'assets/img/icons/menu-icon-02.svg',
+          img: 'assets/icon2/teacheric.svg',
           subMenus: [
             {
               menuValue: 'Listar Docente',
@@ -263,7 +263,7 @@ imagenes: any;
           hasSubRoute: true,
           showSubRoute: false,
           base: 'patient',
-          img: 'assets/img/icons/menu-icon-03.svg',
+          img: 'assets/icon2/student.svg',
           subMenus: [
             {
               menuValue: 'Listar Estudiante',
@@ -287,15 +287,21 @@ imagenes: any;
             },
           ],
         },
+<<<<<<< Updated upstream
 
         {
           menuValue: 'Atenciones',
+=======
+        {
+          menuValue: 'Carreras',
+>>>>>>> Stashed changes
           hasSubRoute: true,
           showSubRoute: false,
           base: 'staff',
           img: 'assets/img/icons/menu-icon-08.svg',
           subMenus: [
             {
+<<<<<<< Updated upstream
               menuValue: 'Listar Atenciones',
               route: routes.atenciones,
               base: routes.staffList,
@@ -303,36 +309,53 @@ imagenes: any;
             {
               menuValue: 'Agregar Atenciones',
               route: routes.addStaff,
-              base: routes.addStaff,
+=======
+              menuValue: 'Listar Carreras',
+              route: routes.listarcarrera,
+              base: routes.staffList,
             },
             {
+              menuValue: 'Agregar Carreras',
+              route: routes.agregarcarrera,
+>>>>>>> Stashed changes
+              base: routes.addStaff,
+            },
+
+            {
+<<<<<<< Updated upstream
               menuValue: 'Editar Atenciones',
               route: routes.staffProfile,
               base: routes.staffProfile,
             },
           
+=======
+              menuValue: 'Editar Carreras',
+              route: routes.editarcarrera,
+              base: routes.addStaff,
+            },
+>>>>>>> Stashed changes
           ],
         },
 
-        /*{
-          menuValue: 'Appointments',
+        {
+          menuValue: 'Atenciones',
           hasSubRoute: true,
           showSubRoute: false,
           base: 'appointments',
           img: 'assets/img/icons/menu-icon-04.svg',
           subMenus: [
             {
-              menuValue: 'Appointment List',
+              menuValue: 'Lista De Atenciones',
               route: routes.appointmentList,
               base: routes.appointmentList,
             },
             {
-              menuValue: 'Book Appointment',
+              menuValue: 'Agregar Atenciones',
               route: routes.addAppointment,
               base: routes.addAppointment,
             },
             {
-              menuValue: 'Edit Appointment',
+              menuValue: 'Editar Atenciones',
               route: routes.editAppointment,
               base: routes.editAppointment,
             },

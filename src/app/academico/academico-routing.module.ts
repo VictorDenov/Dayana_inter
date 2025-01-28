@@ -30,10 +30,18 @@ const routes: Routes = [
         loadChildren: () =>
           import('./Estudiante/estudiante.module').then((m) => m.EstudiantetModule),
       },
+<<<<<<< Updated upstream
       {
         path: 'atenciones',
         loadChildren: () =>
           import('./atenciones/atenciones.module').then((m) => m.AtencionesModule),
+=======
+
+      {
+        path: 'carreras',
+        loadChildren: () =>
+          import('./carreras/carreras.module').then((m) => m.CarreraModule),
+>>>>>>> Stashed changes
       },
     ],
   },
