@@ -31,16 +31,22 @@ const routes: Routes = [
           import('./Estudiante/estudiante.module').then((m) => m.EstudiantetModule),
       },
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       {
         path: 'atenciones',
         loadChildren: () =>
           import('./atenciones/atenciones.module').then((m) => m.AtencionesModule),
 =======
+=======
+>>>>>>> Stashed changes
 
       {
         path: 'carreras',
         loadChildren: () =>
           import('./carreras/carreras.module').then((m) => m.CarreraModule),
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
       },
     ],

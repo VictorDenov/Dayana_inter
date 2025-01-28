@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 @Component({
   selector: 'app-add-atenciones',
@@ -9,6 +10,8 @@ import { Component } from '@angular/core';
 export class AddAtencionesComponent {
 
 =======
+=======
+>>>>>>> Stashed changes
 import { routes } from 'src/app/shared/routes/routes';
 
 @Component({
@@ -18,5 +21,8 @@ import { routes } from 'src/app/shared/routes/routes';
 })
 export class AddAtencionesmentComponent {
   public routes = routes;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 }

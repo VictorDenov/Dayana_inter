@@ -376,6 +376,7 @@ export class routes {
   }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   public static get   atenciones(): string {
     return this.baseUrl + '/atenciones/agregar';
   }
@@ -383,6 +384,8 @@ export class routes {
   public static get   atencioneslista(): string {
     return this.baseUrl + '/atenciones/listar';
 =======
+=======
+>>>>>>> Stashed changes
 
   public static get agregarcarrera(): string {
     return this.baseUrl + '/carreras/add-carreras';
@@ -392,6 +395,9 @@ export class routes {
   }
   public static get editarcarrera(): string {
     return this.baseUrl + '/carreras/edit-carreras';
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   }
  

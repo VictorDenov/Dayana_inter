@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AtencionesComponent } from './atenciones.component';
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import { AddAtencionesComponent } from './add-atenciones/add-atenciones.component';
 import { ListarAtencionesComponent } from './listar-atenciones/listar-atenciones.component';
 
@@ -22,6 +23,8 @@ const routes: Routes = [
       ]
     }
 =======
+=======
+>>>>>>> Stashed changes
 
 const routes: Routes = [
   { path: '', component: AtencionesComponent,
@@ -49,15 +52,24 @@ const routes: Routes = [
     },
   ]
 }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   exports: [RouterModule]
 })
 export class AtencionesRoutingModule { }
+=======
+  exports: [RouterModule],
+})
+export class AtencionesRoutingModule {}
+>>>>>>> Stashed changes
 =======
   exports: [RouterModule],
 })
