@@ -32,11 +32,14 @@ const routes: Routes = [
       },
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       {
         path: 'atenciones',
         loadChildren: () =>
           import('./atenciones/atenciones.module').then((m) => m.AtencionesModule),
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 
@@ -45,6 +48,9 @@ const routes: Routes = [
         loadChildren: () =>
           import('./carreras/carreras.module').then((m) => m.CarreraModule),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

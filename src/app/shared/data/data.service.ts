@@ -289,9 +289,14 @@ imagenes: any;
         },
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
         {
           menuValue: 'Atenciones',
+=======
+        {
+          menuValue: 'Carreras',
+>>>>>>> Stashed changes
 =======
         {
           menuValue: 'Carreras',
@@ -306,6 +311,7 @@ imagenes: any;
           img: 'assets/img/icons/menu-icon-08.svg',
           subMenus: [
             {
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
               menuValue: 'Listar Atenciones',
@@ -323,8 +329,20 @@ imagenes: any;
               menuValue: 'Listar Carreras',
               route: routes.listarcarrera,
               base: routes.staffList,
+=======
+              menuValue: 'Listar Carreras',
+              route: routes.listarcarrera,
+              base: routes.staffList,
             },
             {
+              menuValue: 'Agregar Carreras',
+              route: routes.agregarcarrera,
+              base: routes.addStaff,
+>>>>>>> Stashed changes
+            },
+
+            {
+<<<<<<< Updated upstream
               menuValue: 'Agregar Carreras',
               route: routes.agregarcarrera,
               base: routes.addStaff,
@@ -347,6 +365,8 @@ imagenes: any;
             },
           
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
               menuValue: 'Editar Carreras',
