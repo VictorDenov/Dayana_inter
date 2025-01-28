@@ -374,5 +374,13 @@ export class routes {
   public static get   attendedAppointments(): string {
     return this.baseUrl + '/estudiantes/lista';
   }
+
+  public static get   atenciones(): string {
+    return this.baseUrl + '/atenciones/agregar';
+  }
+
+  public static get   atencioneslista(): string {
+    return this.baseUrl + '/atenciones/listar';
+  }
  
 }

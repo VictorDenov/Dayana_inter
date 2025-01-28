@@ -23,8 +23,8 @@ export class LoginComponent implements OnInit {
   public errorMessage = '';
 
   form = new FormGroup({
-    email: new FormControl('admin1@gma', [Validators.required, Validators.email]),
-    password: new FormControl('Diciembre06@', [Validators.required]),
+    email: new FormControl('dayana1@gmail.com', [Validators.required, Validators.email]),
+    password: new FormControl('Angie123', [Validators.required]),
   });
 
   selectedRole: 'admin' | 'docente' | 'estudiante' | null = null;

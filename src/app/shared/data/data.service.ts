@@ -288,84 +288,31 @@ imagenes: any;
           ],
         },
 
-        /*{
-          menuValue: 'Roles y Permisos',
-          hasSubRoute: true,
-          showSubRoute: false,
-          base: 'gallery',
-          base2: 'profile',
-          icon: 'fa-columns',
-          faIcon: true,
-          subMenus: [
-            {
-              menuValue: 'Registrar Rol',
-              route: routes.registerRole,
-              base: routes.registerRole,
-              permision: 'register_rol',
-              show_nav: true,
-            },
-            {
-              menuValue: 'Listado',
-              route: routes.listadoRole,
-              base: routes.listadoRole,
-              permision: 'list_rol',
-              show_nav: true,
-            },
-            {
-              menuValue: 'Edit Rol',
-              route: '',
-              base: '',
-              permision: 'edit_rol',
-              show_nav: false,
-            },
-            {
-              menuValue: 'Delete Rol',
-              route: '',
-              base: '',
-              permision: 'delete_rol',
-              show_nav: false,
-            },
-          ],
-        },*/
-        /*{
-          menuValue: 'Staff',
+        {
+          menuValue: 'Atenciones',
           hasSubRoute: true,
           showSubRoute: false,
           base: 'staff',
           img: 'assets/img/icons/menu-icon-08.svg',
           subMenus: [
             {
-              menuValue: 'Staff List',
-              route: routes.staffList,
+              menuValue: 'Listar Atenciones',
+              route: routes.atenciones,
               base: routes.staffList,
             },
             {
-              menuValue: 'Add Staff',
+              menuValue: 'Agregar Atenciones',
               route: routes.addStaff,
               base: routes.addStaff,
             },
             {
-              menuValue: 'Staff Profile',
+              menuValue: 'Editar Atenciones',
               route: routes.staffProfile,
               base: routes.staffProfile,
             },
-            {
-              menuValue: 'Leaves',
-              route: routes.staffLeave,
-              base: routes.staffLeave,
-            },
-            {
-              menuValue: 'Holidays',
-              route: routes.staffHoliday,
-              base: routes.staffHoliday,
-            },
-            {
-              menuValue: 'Attendance',
-              route: routes.staffAttendance,
-              base: routes.staffAttendance,
-            },
+          
           ],
-        },*/
+        },
 
         /*{
           menuValue: 'Appointments',
@@ -390,7 +337,7 @@ imagenes: any;
               base: routes.editAppointment,
             },
           ],
-        },*/
+        },
 
         /*{
           menuValue: 'Doctor Schedule',

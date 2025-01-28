@@ -8,10 +8,12 @@ import { SharedModule } from './shared/shared.module';
 import { ToastrModule } from 'ngx-toastr';
 import { TokenService } from './authentication/services/token.service';
 import { AdminInterceptor } from './interceptores/admin.interceptor';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

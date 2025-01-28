@@ -7,6 +7,7 @@ import { SharedModule } from '../shared/shared.module';
 import { AcademicoRoutingModule } from './academico-routing.module';
 import { AcademicoComponent } from './academico.component';
 import { ModalComponent } from './modal/modal.component';
+import { AtencionesComponent } from './atenciones/atenciones.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ModalComponent } from './modal/modal.component';
     AcademicoComponent,
     HeaderComponent,
     SidebarComponent,
-    ModalComponent
+    ModalComponent,
+    AtencionesComponent
   ],
   imports: [
     CommonModule,

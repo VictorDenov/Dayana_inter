@@ -30,6 +30,11 @@ const routes: Routes = [
         loadChildren: () =>
           import('./Estudiante/estudiante.module').then((m) => m.EstudiantetModule),
       },
+      {
+        path: 'atenciones',
+        loadChildren: () =>
+          import('./atenciones/atenciones.module').then((m) => m.AtencionesModule),
+      },
     ],
   },
 
