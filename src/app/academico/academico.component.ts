@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { SideBarService } from '../shared/side-bar/side-bar.service';
 import { Router } from '@angular/router';
-import { DataService } from '../shared/data/data.service';
 import { MenuItem, SideBarData } from '../shared/models/models';
+import { DataService } from '../shared/data/data.service';
 
 interface Route {
   url: string;

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { routes } from '../shared/routes/routes';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+
+
+    public routes = routes;
 
 }

@@ -210,7 +210,7 @@ imagenes: any;
           showSubRoute: false,
           base: 'dashboard',
           route:'dashboard',
-          img: 'assets/icon2/panelc.svg',
+          img: 'assets/img/icons/menu-icon-01.svg',
           subMenus: [
             {
               menuValue: 'Admin',
@@ -234,7 +234,7 @@ imagenes: any;
           hasSubRoute: true,
           showSubRoute: false,
           base: 'doctor',
-          img: 'assets/icon2/teacheric.svg',
+          img: 'assets/img/icons/menu-icon-02.svg',
           subMenus: [
             {
               menuValue: 'Listar Docente',
@@ -263,7 +263,7 @@ imagenes: any;
           hasSubRoute: true,
           showSubRoute: false,
           base: 'patient',
-          img: 'assets/icon2/student.svg',
+          img: 'assets/img/icons/menu-icon-03.svg',
           subMenus: [
             {
               menuValue: 'Listar Estudiante',
@@ -287,120 +287,110 @@ imagenes: any;
             },
           ],
         },
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 
-        {
-          menuValue: 'Atenciones',
-=======
-        {
-          menuValue: 'Carreras',
->>>>>>> Stashed changes
-=======
-        {
-          menuValue: 'Carreras',
->>>>>>> Stashed changes
-=======
-        {
-          menuValue: 'Carreras',
->>>>>>> Stashed changes
+        /*{
+          menuValue: 'Roles y Permisos',
+          hasSubRoute: true,
+          showSubRoute: false,
+          base: 'gallery',
+          base2: 'profile',
+          icon: 'fa-columns',
+          faIcon: true,
+          subMenus: [
+            {
+              menuValue: 'Registrar Rol',
+              route: routes.registerRole,
+              base: routes.registerRole,
+              permision: 'register_rol',
+              show_nav: true,
+            },
+            {
+              menuValue: 'Listado',
+              route: routes.listadoRole,
+              base: routes.listadoRole,
+              permision: 'list_rol',
+              show_nav: true,
+            },
+            {
+              menuValue: 'Edit Rol',
+              route: '',
+              base: '',
+              permision: 'edit_rol',
+              show_nav: false,
+            },
+            {
+              menuValue: 'Delete Rol',
+              route: '',
+              base: '',
+              permision: 'delete_rol',
+              show_nav: false,
+            },
+          ],
+        },*/
+        /*{
+          menuValue: 'Staff',
           hasSubRoute: true,
           showSubRoute: false,
           base: 'staff',
           img: 'assets/img/icons/menu-icon-08.svg',
           subMenus: [
             {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-              menuValue: 'Listar Atenciones',
-              route: routes.atenciones,
+              menuValue: 'Staff List',
+              route: routes.staffList,
               base: routes.staffList,
             },
             {
-              menuValue: 'Agregar Atenciones',
+              menuValue: 'Add Staff',
               route: routes.addStaff,
-=======
-              menuValue: 'Listar Carreras',
-              route: routes.listarcarrera,
-              base: routes.staffList,
-=======
-              menuValue: 'Listar Carreras',
-              route: routes.listarcarrera,
-              base: routes.staffList,
-=======
-              menuValue: 'Listar Carreras',
-              route: routes.listarcarrera,
-              base: routes.staffList,
-            },
-            {
-              menuValue: 'Agregar Carreras',
-              route: routes.agregarcarrera,
-              base: routes.addStaff,
->>>>>>> Stashed changes
-            },
-
-            {
-<<<<<<< Updated upstream
-              menuValue: 'Agregar Carreras',
-              route: routes.agregarcarrera,
-              base: routes.addStaff,
->>>>>>> Stashed changes
-            },
-
-            {
-<<<<<<< Updated upstream
-              menuValue: 'Agregar Carreras',
-              route: routes.agregarcarrera,
->>>>>>> Stashed changes
               base: routes.addStaff,
             },
-
             {
-<<<<<<< Updated upstream
-              menuValue: 'Editar Atenciones',
+              menuValue: 'Staff Profile',
               route: routes.staffProfile,
               base: routes.staffProfile,
             },
-          
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-              menuValue: 'Editar Carreras',
-              route: routes.editarcarrera,
-              base: routes.addStaff,
+            {
+              menuValue: 'Leaves',
+              route: routes.staffLeave,
+              base: routes.staffLeave,
             },
->>>>>>> Stashed changes
+            {
+              menuValue: 'Holidays',
+              route: routes.staffHoliday,
+              base: routes.staffHoliday,
+            },
+            {
+              menuValue: 'Attendance',
+              route: routes.staffAttendance,
+              base: routes.staffAttendance,
+            },
           ],
-        },
+        },*/
 
-        {
-          menuValue: 'Atenciones',
+        /*{
+          menuValue: 'Appointments',
           hasSubRoute: true,
           showSubRoute: false,
           base: 'appointments',
           img: 'assets/img/icons/menu-icon-04.svg',
           subMenus: [
             {
-              menuValue: 'Lista De Atenciones',
+              menuValue: 'Appointment List',
               route: routes.appointmentList,
               base: routes.appointmentList,
             },
             {
-              menuValue: 'Agregar Atenciones',
+              menuValue: 'Book Appointment',
               route: routes.addAppointment,
               base: routes.addAppointment,
             },
             {
-              menuValue: 'Editar Atenciones',
+              menuValue: 'Edit Appointment',
               route: routes.editAppointment,
               base: routes.editAppointment,
             },
           ],
-        },
+        },*/
 
         /*{
           menuValue: 'Doctor Schedule',

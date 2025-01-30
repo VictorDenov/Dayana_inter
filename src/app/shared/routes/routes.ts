@@ -319,7 +319,7 @@ export class routes {
     return this.baseUrl + '/staff/add-leave';
   }
   public static get addStaff(): string {
-    return this.baseUrl + '/carreras/';
+    return this.baseUrl + '/staff/add-staff';
   }
   public static get editLeave(): string {
     return this.baseUrl + '/staff/edit-leave';
@@ -337,7 +337,7 @@ export class routes {
     return this.baseUrl + '/staff/staff-leave';
   }
   public static get staffList(): string {
-    return this.baseUrl + '/carreras/carreras-list';
+    return this.baseUrl + '/staff/staff-list';
   }
   public static get staffProfile(): string {
     return this.baseUrl + '/staff/staff-profile';
@@ -373,38 +373,6 @@ export class routes {
 
   public static get   attendedAppointments(): string {
     return this.baseUrl + '/estudiantes/lista';
-  }
-
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  public static get   atenciones(): string {
-    return this.baseUrl + '/atenciones/agregar';
-  }
-
-  public static get   atencioneslista(): string {
-    return this.baseUrl + '/atenciones/listar';
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-
-  public static get agregarcarrera(): string {
-    return this.baseUrl + '/carreras/add-carreras';
-  }
-  public static get listarcarrera(): string {
-    return this.baseUrl + '/carreras/carreras-list';
-  }
-  public static get editarcarrera(): string {
-    return this.baseUrl + '/carreras/edit-carreras';
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
   }
  
 }

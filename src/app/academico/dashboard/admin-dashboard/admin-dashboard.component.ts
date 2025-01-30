@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { routes } from 'src/app/shared/routes/routes';
 import {
   ApexAxisChartSeries,
   ApexChart,
@@ -15,9 +14,9 @@ import {
   
 } from 'ng-apexcharts';
 import { Sort } from '@angular/material/sort';
-import { DataService } from 'src/app/shared/data/data.service';
 import { recentPatients, upcomingAppointments } from 'src/app/shared/models/models';
 import { TokenService } from 'src/app/authentication/services/token.service';
+import { routes } from 'src/app/shared/routes/routes';
 export type ChartOptions = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   series: ApexAxisChartSeries | any;

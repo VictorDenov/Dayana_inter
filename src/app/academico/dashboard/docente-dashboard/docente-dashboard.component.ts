@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { routes } from 'src/app/shared/routes/routes';
 import {
   ChartComponent,
   ApexAxisChartSeries,
@@ -18,6 +17,7 @@ import {
   ApexTooltip,
 } from 'ng-apexcharts';
 import { TokenService } from 'src/app/authentication/services/token.service';
+import { routes } from 'src/app/shared/routes/routes';
 interface data {
   value: string ;
 }

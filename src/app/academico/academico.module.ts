@@ -10,13 +10,13 @@ import { ModalComponent } from './modal/modal.component';
 import { AtencionesComponent } from './atenciones/atenciones.component';
 
 
+
 @NgModule({
   declarations: [
     AcademicoComponent,
     HeaderComponent,
     SidebarComponent,
     ModalComponent,
-    AtencionesComponent
   ],
   imports: [
     CommonModule,

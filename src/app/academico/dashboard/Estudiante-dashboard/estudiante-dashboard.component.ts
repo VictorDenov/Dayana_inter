@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { routes } from 'src/app/shared/routes/routes';
 import {
   ChartComponent,
   ApexAxisChartSeries,
@@ -21,6 +20,7 @@ import { DataService } from 'src/app/shared/data/data.service';
 import { Sort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { pageSelection, apiResultFormat, patientDashboard } from 'src/app/shared/models/models';
+import { routes } from 'src/app/shared/routes/routes';
 interface data {
   value: string ;
 }

@@ -2,8 +2,6 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AcademicoComponent } from './academico.component';
 import { AuthGuard } from '../shared/gaurd/auth.guard';
-import { LoginGuard } from '../shared/gaurd/login.guard';
-
 const routes: Routes = [
   {
     path: '',
@@ -30,31 +28,19 @@ const routes: Routes = [
         loadChildren: () =>
           import('./Estudiante/estudiante.module').then((m) => m.EstudiantetModule),
       },
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
       {
         path: 'atenciones',
         loadChildren: () =>
           import('./atenciones/atenciones.module').then((m) => m.AtencionesModule),
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+      },
 
       {
         path: 'carreras',
         loadChildren: () =>
           import('./carreras/carreras.module').then((m) => m.CarreraModule),
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
       },
+    
     ],
   },
 
