@@ -15,7 +15,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   images = [
     'assets/fondosits/baner.jpg',
     'assets/fondosits/banner insti-02.jpg',
-    'assets/fondosits/banner insti-03.jpg'
+    'assets/fondosits/banner insti-03.jpg',
+     'assets/fondosits/banner insti-03.jpg',
+      'assets/fondosits/banner insti-03.jpg'
   ];
 
   // Índice de la imagen actual
